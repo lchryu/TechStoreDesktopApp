@@ -1,0 +1,506 @@
+{
+  "Products": [
+    {
+      "Id": "p1",
+      "Name": "iPhone 15 Pro Max 256GB",
+      "Category": "phone_apple",
+      "Price": 29990000,
+      "Stock": 12,
+      "ImageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Khung vi\u1EC1n Titan si\u00EAu b\u1EC1n nh\u1EB9, n\u00FAt T\u00E1c V\u1EE5 m\u1EDBi, camera zoom quang 5x c\u00F9ng chip A17 Pro t\u1ED1i t\u00E2n.",
+      "Specs": [
+        "Khung v\u1ECF Titan c\u1EA5p v\u0169 tr\u1EE5",
+        "Chip A17 Pro m\u1EA1nh m\u1EBD",
+        "Camera ch\u00EDnh 48MP zoom 5x",
+        "M\u00E0n h\u00ECnh Super Retina XDR 6.7 inch"
+      ]
+    },
+    {
+      "Id": "p2",
+      "Name": "iPhone 14 128GB Black",
+      "Category": "phone_apple",
+      "Price": 18490000,
+      "Stock": 6,
+      "ImageUrl": "https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "M\u00E0n h\u00ECnh Super Retina XDR s\u1EAFc n\u00E9t, chip A15 Bionic t\u1ED1i \u01B0u th\u1EDDi l\u01B0\u1EE3ng pin c\u1EF1c kh\u1EE7ng.",
+      "Specs": [
+        "Chip A15 Bionic 5 nh\u00E2n GPU",
+        "B\u1ED9 nh\u1EDB trong 128GB",
+        "Camera k\u00E9p ch\u1EE5p \u0111\u00EAm c\u1EF1c t\u1ED1t",
+        "Th\u1EDDi l\u01B0\u1EE3ng pin ph\u00E1t video l\u00EAn \u0111\u1EBFn 20 gi\u1EDD"
+      ]
+    },
+    {
+      "Id": "p12",
+      "Name": "iPhone 15 128GB Yellow",
+      "Category": "phone_apple",
+      "Price": 19990000,
+      "Stock": 8,
+      "ImageUrl": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "M\u00E0n h\u00ECnh Dynamic Island \u0111\u1ED9t ph\u00E1, camera ch\u00EDnh 48MP v\u00E0 c\u1ED5ng k\u1EBFt n\u1ED1i USB-C ti\u1EC7n d\u1EE5ng.",
+      "Specs": [
+        "Dynamic Island hi\u1EC7n \u0111\u1EA1i",
+        "Chip A16 Bionic m\u1EA1nh m\u1EBD",
+        "Camera ch\u00EDnh 48MP th\u1EBF h\u1EC7 m\u1EDBi",
+        "C\u1ED5ng k\u1EBFt n\u1ED1i USB-C chu\u1EA9n ti\u1EC7n d\u1EE5ng"
+      ]
+    },
+    {
+      "Id": "p13",
+      "Name": "iPhone 13 128GB Blue",
+      "Category": "phone_apple",
+      "Price": 13990000,
+      "Stock": 10,
+      "ImageUrl": "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Thi\u1EBFt k\u1EBF vu\u00F4ng v\u1EAFn c\u1ED5 \u0111i\u1EC3n, c\u1EE5m camera ch\u00E9o \u0111\u1ED9c \u0111\u00E1o c\u00F9ng th\u1EDDi l\u01B0\u1EE3ng pin xu\u1EA5t s\u1EAFc.",
+      "Specs": [
+        "Chip A15 Bionic",
+        "M\u00E0n h\u00ECnh Super Retina XDR 6.1 inch",
+        "H\u1EC7 th\u1ED1ng camera k\u00E9p 12MP",
+        "K\u1EBFt n\u1ED1i 5G si\u00EAu t\u1ED1c"
+      ]
+    },
+    {
+      "Id": "p3",
+      "Name": "Samsung Galaxy S24 Ultra",
+      "Category": "phone_samsung",
+      "Price": 31990000,
+      "Stock": 9,
+      "ImageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "K\u1EF7 nguy\u00EAn Galaxy AI m\u1EDBi. Khung vi\u1EC1n Titan b\u1EC1n b\u1EC9, camera si\u00EAu ph\u00E2n gi\u1EA3i 200MP c\u00F9ng b\u00FAt S Pen t\u00EDch h\u1EE3p.",
+      "Specs": [
+        "Chip Snapdragon 8 Gen 3 for Galaxy",
+        "B\u00FAt S Pen \u0111i k\u00E8m ti\u1EC7n l\u1EE3i",
+        "Camera 200MP Zoom AI 100x",
+        "M\u00E0n h\u00ECnh Dynamic AMOLED 2X 6.8 inch"
+      ]
+    },
+    {
+      "Id": "p4",
+      "Name": "Samsung Galaxy Z Fold5 5G",
+      "Category": "phone_samsung",
+      "Price": 40990000,
+      "Stock": 3,
+      "ImageUrl": "https://images.unsplash.com/photo-1574757134101-f25f3bc8a121?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Thi\u1EBFt k\u1EBF g\u1EADp kh\u00F4ng k\u1EBD h\u1EDF cao c\u1EA5p, m\u1EDF ra kh\u00F4ng gian l\u00E0m vi\u1EC7c r\u1ED9ng r\u00E3i nh\u01B0 m\u00E1y t\u00EDnh b\u1EA3ng.",
+      "Specs": [
+        "M\u00E0n h\u00ECnh g\u1EADp Dynamic AMOLED 7.6 inch",
+        "M\u00E0n h\u00ECnh ph\u1EE5 6.2 inch",
+        "H\u1ED7 tr\u1EE3 \u0111a nhi\u1EC7m 3 \u1EE9ng d\u1EE5ng c\u00F9ng l\u00FAc",
+        "Kh\u00E1ng n\u01B0\u1EDBc chu\u1EA9n IPX8"
+      ]
+    },
+    {
+      "Id": "p14",
+      "Name": "Samsung Galaxy A55 5G 128GB",
+      "Category": "phone_samsung",
+      "Price": 9990000,
+      "Stock": 15,
+      "ImageUrl": "https://images.unsplash.com/photo-1610945415295-d9b2100837fc?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Thi\u1EBFt k\u1EBF khung kim lo\u1EA1i cao c\u1EA5p, camera 50MP ch\u1ED1ng rung quang h\u1ECDc OIS v\u00E0 m\u00E0n h\u00ECnh 120Hz m\u01B0\u1EE3t m\u00E0.",
+      "Specs": [
+        "Khung kim lo\u1EA1i sang tr\u1ECDng",
+        "Camera OIS 50MP ch\u1EE5p \u0111\u00EAm t\u1ED1t",
+        "M\u00E0n h\u00ECnh Super AMOLED 120Hz",
+        "Kh\u00E1ng n\u01B0\u1EDBc ch\u1ED1ng b\u1EE5i IP67"
+      ]
+    },
+    {
+      "Id": "p5",
+      "Name": "Xiaomi 14 Ultra 5G",
+      "Category": "phone_xiaomi",
+      "Price": 27990000,
+      "Stock": 4,
+      "ImageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "H\u1EE3p t\u00E1c \u0111\u1ED3ng ch\u1EBF t\u00E1c c\u00F9ng Leica. C\u1EA3m bi\u1EBFn camera 1 inch h\u00E0ng \u0111\u1EA7u mang l\u1EA1i ch\u1EA5t l\u01B0\u1EE3ng \u1EA3nh ch\u1EE5p ch\u00E2n th\u1EF1c, c\u00F3 chi\u1EC1u s\u00E2u.",
+      "Specs": [
+        "\u1ED0ng k\u00EDnh quang h\u1ECDc Leica Summilux",
+        "C\u1EA3m bi\u1EBFn l\u1EDBn LYT-900 1 inch",
+        "Chip Snapdragon 8 Gen 3",
+        "S\u1EA1c nhanh si\u00EAu t\u1ED1c 90W"
+      ]
+    },
+    {
+      "Id": "p16",
+      "Name": "Xiaomi Redmi Note 13 Pro",
+      "Category": "phone_xiaomi",
+      "Price": 7290000,
+      "Stock": 18,
+      "ImageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Camera si\u00EAu n\u00E9t 200MP ch\u1ED1ng rung OIS, s\u1EA1c t\u0103ng t\u1ED1c 67W c\u00F9ng m\u00E0n h\u00ECnh AMOLED 1.5K s\u1EAFc n\u00E9t.",
+      "Specs": [
+        "Camera si\u00EAu ph\u00E2n gi\u1EA3i 200MP OIS",
+        "M\u00E0n h\u00ECnh AMOLED 1.5K 120Hz",
+        "Chip Helio G99-Ultra t\u1ED1i \u01B0u",
+        "S\u1EA1c nhanh si\u00EAu t\u1ED1c 67W"
+      ]
+    },
+    {
+      "Id": "p17",
+      "Name": "Xiaomi 13T 5G 256GB",
+      "Category": "phone_xiaomi",
+      "Price": 11990000,
+      "Stock": 7,
+      "ImageUrl": "https://images.unsplash.com/photo-1565630916779-e303be97b6f5?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "H\u1EC7 th\u1ED1ng \u1ED1ng k\u00EDnh Leica chuy\u00EAn nghi\u1EC7p, m\u00E0n h\u00ECnh CrystalRes AMOLED 144Hz si\u00EAu m\u01B0\u1EE3t v\u00E0 kh\u00E1ng n\u01B0\u1EDBc IP68.",
+      "Specs": [
+        "H\u1EC7 th\u1ED1ng camera Leica 50MP",
+        "M\u00E0n h\u00ECnh AMOLED 144Hz m\u01B0\u1EE3t m\u00E0",
+        "Vi x\u1EED l\u00FD MediaTek Dimensity 8200-Ultra",
+        "Kh\u00E1ng n\u01B0\u1EDBc ch\u1ED1ng b\u1EE5i IP68"
+      ]
+    },
+    {
+      "Id": "p6",
+      "Name": "MacBook Pro 14 inch M3",
+      "Category": "laptop",
+      "Price": 39990000,
+      "Stock": 8,
+      "ImageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "MacBook Pro 14 inch trang b\u1ECB chip M3 mang l\u1EA1i hi\u1EC7u n\u0103ng phi th\u01B0\u1EDDng cho c\u00E1c t\u00E1c v\u1EE5 h\u00E0ng ng\u00E0y v\u00E0 chuy\u00EAn nghi\u1EC7p. Th\u1EDDi l\u01B0\u1EE3ng pin l\u00EAn \u0111\u1EBFn 22 gi\u1EDD c\u00F9ng m\u00E0n h\u00ECnh Liquid Retina XDR tuy\u1EC7t \u0111\u1EB9p.",
+      "Specs": [
+        "Chip Apple M3 v\u1EDBi 8-core CPU v\u00E0 10-core GPU",
+        "8GB Unified Memory",
+        "512GB SSD Storage",
+        "M\u00E0n h\u00ECnh Liquid Retina XDR 14-inch",
+        "Th\u1EDDi l\u01B0\u1EE3ng pin l\u00EAn \u0111\u1EBFn 22 gi\u1EDD"
+      ]
+    },
+    {
+      "Id": "p7",
+      "Name": "Asus ROG Zephyrus G14",
+      "Category": "laptop",
+      "Price": 45990000,
+      "Stock": 2,
+      "ImageUrl": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Laptop gaming 14 inch m\u1EA1nh m\u1EBD nh\u1EA5t th\u1EBF gi\u1EDBi v\u1EDBi b\u1ED9 vi x\u1EED l\u00FD AMD Ryzen 9 v\u00E0 card \u0111\u1ED3 h\u1ECDa RTX 4060. M\u00E0n h\u00ECnh Nebula OLED s\u1EAFc n\u00E9t t\u1EA7n s\u1ED1 qu\u00E9t 120Hz m\u01B0\u1EE3t m\u00E0.",
+      "Specs": [
+        "CPU AMD Ryzen 9 8945HS",
+        "NVIDIA GeForce RTX 4060 8GB",
+        "16GB LPDDR5X RAM",
+        "1TB M.2 NVMe PCIe SSD",
+        "M\u00E0n h\u00ECnh 14-inch 2.8K OLED 120Hz"
+      ]
+    },
+    {
+      "Id": "p22",
+      "Name": "Dell XPS 13 Plus 9320",
+      "Category": "laptop",
+      "Price": 38990000,
+      "Stock": 4,
+      "ImageUrl": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Thi\u1EBFt k\u1EBF t\u01B0\u01A1ng lai mang t\u00EDnh \u0111\u1ED9t ph\u00E1 v\u1EDBi b\u00E0n ph\u00EDm tr\u00E0n vi\u1EC1n, thanh ch\u1EA1m c\u1EA3m \u1EE9ng \u0111i\u1EC7n dung v\u00E0 m\u00E0n h\u00ECnh OLED s\u1EAFc n\u00E9t v\u00F4 c\u1EF1c.",
+      "Specs": [
+        "CPU Intel Core i7 1360P",
+        "16GB LPDDR5 RAM",
+        "512GB NVMe SSD",
+        "M\u00E0n h\u00ECnh 13.4 inch 3.5K OLED Touch",
+        "Tr\u1ECDng l\u01B0\u1EE3ng si\u00EAu nh\u1EB9 1.26 kg"
+      ]
+    },
+    {
+      "Id": "p8",
+      "Name": "Apple Watch Ultra 2 Titan",
+      "Category": "watch",
+      "Price": 21990000,
+      "Stock": 3,
+      "ImageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Chi\u1EBFc Apple Watch b\u1EC1n b\u1EC9 v\u00E0 \u0111a n\u0103ng nh\u1EA5t. \u0110\u01B0\u1EE3c thi\u1EBFt k\u1EBF cho c\u00E1c cu\u1ED9c phi\u00EAu l\u01B0u ngo\u00E0i tr\u1EDDi v\u00E0 t\u1EADp luy\u1EC7n c\u01B0\u1EDDng \u0111\u1ED9 cao v\u1EDBi v\u1ECF titan si\u00EAu nh\u1EB9, pin c\u1EF1c tr\u00E2u v\u00E0 m\u00E0n h\u00ECnh si\u00EAu s\u00E1ng.",
+      "Specs": [
+        "V\u1ECF Titan 49mm ch\u1ED1ng \u0103n m\u00F2n",
+        "Chip S9 SiP m\u1EA1nh m\u1EBD",
+        "\u0110\u1ED9 s\u00E1ng m\u00E0n h\u00ECnh t\u1ED1i \u0111a 3000 nits",
+        "GPS t\u1EA7n s\u1ED1 k\u00E9p chu\u1EA9n x\u00E1c",
+        "Th\u1EDDi l\u01B0\u1EE3ng pin l\u00EAn t\u1EDBi 36 gi\u1EDD (ch\u1EBF \u0111\u1ED9 th\u01B0\u1EDDng)"
+      ]
+    },
+    {
+      "Id": "p9",
+      "Name": "Samsung Galaxy Watch6 Classic",
+      "Category": "watch",
+      "Price": 8490000,
+      "Stock": 6,
+      "ImageUrl": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "V\u00F2ng xoay bezel v\u1EADt l\u00FD \u0111\u1EB7c tr\u01B0ng. Theo d\u00F5i gi\u1EA5c ng\u1EE7 chuy\u00EAn s\u00E2u v\u00E0 ph\u00E2n t\u00EDch c\u1EA5u tr\u00FAc c\u01A1 th\u1EC3 BIA th\u1EDDi gian th\u1EF1c.",
+      "Specs": [
+        "V\u00F2ng xoay Bezel xoay m\u01B0\u1EE3t m\u00E0",
+        "Ph\u00E2n t\u00EDch ch\u1EC9 s\u1ED1 c\u01A1 th\u1EC3 BIA",
+        "C\u1EA3m bi\u1EBFn nhi\u1EC7t \u0111\u1ED9 h\u1ED3ng ngo\u1EA1i",
+        "M\u00E0n h\u00ECnh k\u00EDnh Sapphire ch\u1ED1ng tr\u1EA7y"
+      ]
+    },
+    {
+      "Id": "p18",
+      "Name": "Apple Watch Series 9 GPS 45mm",
+      "Category": "watch",
+      "Price": 10490000,
+      "Stock": 11,
+      "ImageUrl": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Chip S9 SiP m\u1EA1nh v\u01B0\u1EE3t tr\u1ED9i, t\u00EDnh n\u0103ng ch\u1EA1m hai l\u1EA7n (Double Tap) k\u1EF3 di\u1EC7u c\u00F9ng c\u1EA3m bi\u1EBFn s\u1EE9c kh\u1ECFe chuy\u00EAn s\u00E2u.",
+      "Specs": [
+        "T\u00EDnh n\u0103ng Ch\u1EA1m Hai L\u1EA7n \u0111\u1ED9t ph\u00E1",
+        "C\u1EA3m bi\u1EBFn nhi\u1EC7t \u0111\u1ED9 \u0026 SPO2",
+        "\u0110\u1ED9 s\u00E1ng m\u00E0n h\u00ECnh 2000 nits",
+        "Kh\u00E1ng b\u1EE5i chu\u1EA9n IPX8"
+      ]
+    },
+    {
+      "Id": "p19",
+      "Name": "Xiaomi Redmi Watch 4",
+      "Category": "watch",
+      "Price": 2390000,
+      "Stock": 20,
+      "ImageUrl": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Khung vi\u1EC1n h\u1EE3p kim nh\u00F4m sang tr\u1ECDng, m\u00E0n h\u00ECnh AMOLED 1.97 inch l\u1EDBn r\u00F5 n\u00E9t c\u00F9ng th\u1EDDi l\u01B0\u1EE3ng pin l\u00EAn \u0111\u1EBFn 20 ng\u00E0y.",
+      "Specs": [
+        "M\u00E0n h\u00ECnh AMOLED l\u1EDBn 1.97 inch",
+        "Pin c\u1EF1c tr\u00E2u l\u00EAn \u0111\u1EBFn 20 ng\u00E0y",
+        "H\u1ED7 tr\u1EE3 cu\u1ED9c g\u1ECDi qua Bluetooth",
+        "Theo d\u00F5i nh\u1ECBp tim \u0026 gi\u1EA5c ng\u1EE7 24/7"
+      ]
+    },
+    {
+      "Id": "p10",
+      "Name": "Tai Nghe Sony WH-1000XM5",
+      "Category": "accessory",
+      "Price": 8490000,
+      "Stock": 3,
+      "ImageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Tai nghe ch\u1ED1ng \u1ED3n WH-1000XM5 \u0111\u1ECBnh ngh\u0129a l\u1EA1i ti\u00EAu chu\u1EA9n nghe nh\u1EA1c kh\u00F4ng b\u1ECB gi\u00E1n \u0111o\u1EA1n v\u1EDBi 2 b\u1ED9 x\u1EED l\u00FD ki\u1EC3m so\u00E1t 8 micr\u00F4, t\u1ED1i \u01B0u h\u00F3a ch\u1ED1ng \u1ED3n t\u1EF1 \u0111\u1ED9ng theo m\u00F4i tr\u01B0\u1EDDng.",
+      "Specs": [
+        "Ch\u1ED1ng \u1ED3n ch\u1EE7 \u0111\u1ED9ng ANC \u0111\u1EC9nh cao",
+        "B\u1ED9 m\u00E0ng loa 30 mm \u0111\u01B0\u1EE3c thi\u1EBFt k\u1EBF \u0111\u1EB7c bi\u1EC7t",
+        "Th\u1EDDi l\u01B0\u1EE3ng pin l\u00EAn \u0111\u1EBFn 30 gi\u1EDD",
+        "H\u1ED7 tr\u1EE3 LDAC cho \u00E2m thanh \u0111\u1ED9 ph\u00E2n gi\u1EA3i cao",
+        "T\u1EF1 \u0111\u1ED9ng t\u1EA1m d\u1EEBng khi n\u00F3i chuy\u1EC7n (Speak-to-Chat)"
+      ]
+    },
+    {
+      "Id": "p11",
+      "Name": "B\u00E0n Ph\u00EDm Keychron K2 Pro",
+      "Category": "accessory",
+      "Price": 2450000,
+      "Stock": 15,
+      "ImageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "B\u00E0n ph\u00EDm c\u01A1 kh\u00F4ng d\u00E2y layout 75% h\u1ED7 tr\u1EE3 QMK/VIA \u0111\u1EC3 t\u00F9y ch\u1EC9nh m\u1ECDi ph\u00EDm b\u1EA5m. Tr\u1EA3i nghi\u1EC7m g\u00F5 \u00EAm \u00E1i nh\u1EDD foam ti\u00EAu \u00E2m t\u00EDch h\u1EE3p v\u00E0 switch Keychron Pro \u0111\u01B0\u1EE3c lube s\u1EB5n.",
+      "Specs": [
+        "Layout 75% nh\u1ECF g\u1ECDn",
+        "H\u1ED7 tr\u1EE3 QMK/VIA t\u00F9y ch\u1EC9nh ph\u00EDm",
+        "H\u1ED7 tr\u1EE3 Hot-swappable d\u1EC5 thay switch",
+        "K\u1EBFt n\u1ED1i Bluetooth 5.1 \u0026 Type-C",
+        "T\u01B0\u01A1ng th\u00EDch t\u1ED1t macOS \u0026 Windows"
+      ]
+    },
+    {
+      "Id": "p20",
+      "Name": "Tai Nghe Apple AirPods Pro 2 USB-C",
+      "Category": "accessory",
+      "Price": 5990000,
+      "Stock": 14,
+      "ImageUrl": "https://images.unsplash.com/photo-1588449668365-d15e397f6787?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "Kh\u1EA3 n\u0103ng ch\u1ED1ng \u1ED3n ch\u1EE7 \u0111\u1ED9ng ANC t\u1ED1t h\u01A1n g\u1EA5p 2 l\u1EA7n, th\u00EDch \u1EE9ng \u00E2m thanh th\u00F4ng minh v\u00E0 c\u1ED5ng s\u1EA1c USB-C m\u1EDBi.",
+      "Specs": [
+        "Chip Apple H2 \u00E2m thanh v\u01B0\u1EE3t tr\u1ED9i",
+        "Ch\u1ED1ng \u1ED3n th\u00EDch \u1EE9ng \u0026 xuy\u00EAn \u00E2m",
+        "H\u1ED9p s\u1EA1c MagSafe t\u00EDch h\u1EE3p USB-C",
+        "Th\u1EDDi gian nghe l\u00EAn \u0111\u1EBFn 6 gi\u1EDD"
+      ]
+    },
+    {
+      "Id": "p21",
+      "Name": "Chu\u1ED9t Logitech MX Master 3S",
+      "Category": "accessory",
+      "Price": 2490000,
+      "Stock": 22,
+      "ImageUrl": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format\u0026fit=crop\u0026w=500\u0026q=80",
+      "Description": "D\u00F2ng chu\u1ED9t c\u00F4ng th\u00E1i h\u1ECDc cao c\u1EA5p chuy\u00EAn nghi\u1EC7p cho l\u1EADp tr\u00ECnh vi\u00EAn v\u00E0 designer. C\u1EA3m bi\u1EBFn 8K DPI si\u00EAu nh\u1EA1y tr\u00EAn m\u1ECDi m\u1EB7t k\u00EDnh v\u00E0 n\u00FAt cu\u1ED9n MagSpeed si\u00EAu t\u1ED1c c\u1EF1c \u00EAm.",
+      "Specs": [
+        "N\u00FAt cu\u1ED9n MagSpeed \u0111i\u1EC7n t\u1EEB c\u1EF1c nhanh",
+        "C\u1EA3m bi\u1EBFn Darkfield 8000 DPI",
+        "N\u00FAt b\u1EA5m nh\u1EA5p chu\u1ED9t y\u00EAn t\u0129nh 90%",
+        "K\u1EBFt n\u1ED1i Flow chuy\u1EC3n \u0111\u1ED5i 3 thi\u1EBFt b\u1ECB"
+      ]
+    }
+  ],
+  "Users": [
+    {
+      "Username": "user",
+      "Password": "123",
+      "FullName": "Nguy\u1EC5n V\u0103n Kh\u00E1ch",
+      "Phone": "0987654321",
+      "Address": "456 \u0110\u01B0\u1EDDng CMT8, Qu\u1EADn 3, TP. H\u1ED3 Ch\u00ED Minh",
+      "Role": "customer",
+      "SecurityQuestion": "",
+      "SecurityAnswer": "",
+      "OrderHistory": [
+        {
+          "OrderId": "DH182418",
+          "Date": "11/06/2026",
+          "TotalAmount": 8490000,
+          "ItemsSummary": "Tai Nghe Sony WH-1000XM5 x1",
+          "Status": "Ch\u1EDD x\u1EED l\u00FD"
+        },
+        {
+          "OrderId": "DH165802",
+          "Date": "11/06/2026",
+          "TotalAmount": 8490000,
+          "ItemsSummary": "Samsung Galaxy Watch6 Classic x1",
+          "Status": "Ch\u1EDD x\u1EED l\u00FD"
+        },
+        {
+          "OrderId": "DH1024",
+          "Date": "08/06/2026",
+          "TotalAmount": 2450000,
+          "ItemsSummary": "B\u00E0n Ph\u00EDm C\u01A1 Keychron K2 Pro x1",
+          "Status": "\u0110ang giao"
+        }
+      ]
+    },
+    {
+      "Username": "admin",
+      "Password": "123",
+      "FullName": "Tr\u1EA7n Qu\u1EA3n Tr\u1ECB",
+      "Phone": "0909090909",
+      "Address": "123 \u0110\u01B0\u1EDDng L\u00EA L\u1EE3i, Qu\u1EADn 1, TP. H\u1ED3 Ch\u00ED Minh",
+      "Role": "admin",
+      "SecurityQuestion": "",
+      "SecurityAnswer": "",
+      "OrderHistory": []
+    }
+  ],
+  "Sales": {
+    "Revenue": 162780000,
+    "Orders": 8,
+    "History": [
+      {
+        "Date": "04/06",
+        "Amount": 15400000
+      },
+      {
+        "Date": "05/06",
+        "Amount": 29990000
+      },
+      {
+        "Date": "06/06",
+        "Amount": 8490000
+      },
+      {
+        "Date": "07/06",
+        "Amount": 45990000
+      },
+      {
+        "Date": "08/06",
+        "Amount": 2450000
+      },
+      {
+        "Date": "09/06",
+        "Amount": 39990000
+      },
+      {
+        "Date": "10/06",
+        "Amount": 20470000
+      }
+    ]
+  },
+  "Vouchers": [
+    {
+      "Code": "TECH10",
+      "Description": "Gi\u1EA3m 10% t\u1ED5ng \u0111\u01A1n h\u00E0ng (T\u1ED1i \u0111a 500k)",
+      "DiscountPercent": 10,
+      "MaxDiscount": 500000
+    },
+    {
+      "Code": "SALEOFF",
+      "Description": "Gi\u1EA3m 20% cho kh\u00E1ch h\u00E0ng m\u1EDBi (T\u1ED1i \u0111a 200k)",
+      "DiscountPercent": 20,
+      "MaxDiscount": 200000
+    },
+    {
+      "Code": "FREESHIP",
+      "Description": "Gi\u1EA3m 5% h\u1ED7 tr\u1EE3 ph\u00ED ship (T\u1ED1i \u0111a 50k)",
+      "DiscountPercent": 5,
+      "MaxDiscount": 50000
+    },
+    {
+      "Code": "LAPTOP15",
+      "Description": "Gi\u1EA3m 15% cho \u0111\u01A1n laptop (T\u1ED1i \u0111a 1 tri\u1EC7u)",
+      "DiscountPercent": 15,
+      "MaxDiscount": 1000000
+    },
+    {
+      "Code": "APPLE500",
+      "Description": "Gi\u1EA3m 8% khi mua s\u1EA3n ph\u1EA9m Apple (T\u1ED1i \u0111a 500k)",
+      "DiscountPercent": 8,
+      "MaxDiscount": 500000
+    },
+    {
+      "Code": "WELCOME25",
+      "Description": "Gi\u1EA3m 25% cho \u0111\u01A1n h\u00E0ng \u0111\u1EA7u ti\u00EAn (T\u1ED1i \u0111a 300k)",
+      "DiscountPercent": 25,
+      "MaxDiscount": 300000
+    },
+    {
+      "Code": "FLASH50",
+      "Description": "Gi\u1EA3m 50% trong khung gi\u1EDD flash sale (T\u1ED1i \u0111a 150k)",
+      "DiscountPercent": 50,
+      "MaxDiscount": 150000
+    }
+  ],
+  "Feedbacks": [
+    {
+      "Id": "FB01",
+      "CustomerName": "Nguy\u1EC5n V\u0103n Kh\u00E1ch",
+      "Email": "user@example.com",
+      "Message": "S\u1EA3n ph\u1EA9m iPhone 15 Pro Max d\u00F9ng r\u1EA5t t\u1ED1t, nh\u00E2n vi\u00EAn t\u01B0 v\u1EA5n nhi\u1EC7t t\u00ECnh!",
+      "Date": "08/06/2026",
+      "Status": "\u0110\u00E3 gi\u1EA3i quy\u1EBFt"
+    },
+    {
+      "Id": "FB02",
+      "CustomerName": "L\u00EA Th\u1ECB Lan",
+      "Email": "lanle@gmail.com",
+      "Message": "T\u00F4i mu\u1ED1n h\u1ECFi ch\u1EBF \u0111\u1ED9 b\u1EA3o h\u00E0nh c\u1EE7a Macbook Pro M3 th\u1EBF n\u00E0o \u1EA1?",
+      "Date": "10/06/2026",
+      "Status": "Ch\u1EDD x\u1EED l\u00FD"
+    },
+    {
+      "Id": "FB03",
+      "CustomerName": "Ph\u1EA1m Minh Qu\u00E2n",
+      "Email": "quanpm@gmail.com",
+      "Message": "Shop giao Galaxy S24 Ultra nhanh, m\u00E1y nguy\u00EAn seal v\u00E0 \u0111\u01B0\u1EE3c h\u1ED7 tr\u1EE3 chuy\u1EC3n d\u1EEF li\u1EC7u r\u1EA5t ch\u1EE7 \u0111\u1ED9ng.",
+      "Date": "11/06/2026",
+      "Status": "\u0110\u00E3 gi\u1EA3i quy\u1EBFt"
+    },
+    {
+      "Id": "FB04",
+      "CustomerName": "Ho\u00E0ng Thu Trang",
+      "Email": "trang.ht@example.com",
+      "Message": "M\u00ECnh c\u1EA7n xu\u1EA5t h\u00F3a \u0111\u01A1n c\u00F4ng ty cho \u0111\u01A1n mua laptop, shop h\u1ED7 tr\u1EE3 gi\u00FAp m\u00ECnh nh\u00E9.",
+      "Date": "11/06/2026",
+      "Status": "Ch\u1EDD x\u1EED l\u00FD"
+    },
+    {
+      "Id": "FB05",
+      "CustomerName": "\u0110\u1EB7ng H\u1EEFu Ph\u00FAc",
+      "Email": "phuc.dang@gmail.com",
+      "Message": "Tai nghe \u00E2m thanh t\u1ED1t nh\u01B0ng h\u1ED9p h\u01A1i m\u00F3p m\u1ED9t g\u00F3c, mong shop ki\u1EC3m tra kh\u00E2u \u0111\u00F3ng g\u00F3i.",
+      "Date": "09/06/2026",
+      "Status": "Ch\u1EDD x\u1EED l\u00FD"
+    },
+    {
+      "Id": "FB06",
+      "CustomerName": "B\u00F9i Kh\u00E1nh Linh",
+      "Email": "linhbk@example.com",
+      "Message": "Nh\u00E2n vi\u00EAn t\u01B0 v\u1EA5n \u0111\u00FAng nhu c\u1EA7u, m\u00ECnh ch\u1ECDn \u0111\u01B0\u1EE3c Apple Watch r\u1EA5t \u01B0ng \u00FD.",
+      "Date": "07/06/2026",
+      "Status": "\u0110\u00E3 gi\u1EA3i quy\u1EBFt"
+    }
+  ],
+  "Settings": {
+    "StoreName": "TechStore",
+    "Hotline": "1900-1234",
+    "Email": "support@techstore.com",
+    "Address": "123 \u0110\u01B0\u1EDDng L\u00EA L\u1EE3i, Qu\u1EADn 1, TP. H\u1ED3 Ch\u00ED Minh",
+    "IsMaintenanceMode": false
+  }
+}

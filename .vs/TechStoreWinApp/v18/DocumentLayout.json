@@ -1,0 +1,233 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\TechStoreDesktopApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\forgotpasswordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:forgotpasswordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\orderdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:orderdetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|D:\\TechStoreDesktopApp\\detailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:detailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|D:\\TechStoreDesktopApp\\checkoutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:checkoutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\checkoutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:checkoutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\productform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:productform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\detailform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:detailform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|d:\\techstoredesktopapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29839D97-4F0E-4627-A6F9-82CE9EAE265F}|TechStoreWinApp.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ForgotPasswordForm.cs [Design]",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\ForgotPasswordForm.cs",
+              "RelativeDocumentMoniker": "ForgotPasswordForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\ForgotPasswordForm.cs [Design]",
+              "RelativeToolTip": "ForgotPasswordForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T14:11:52.804Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderDetailForm.cs [Design]",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\OrderDetailForm.cs",
+              "RelativeDocumentMoniker": "OrderDetailForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\OrderDetailForm.cs [Design]",
+              "RelativeToolTip": "OrderDetailForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T14:05:10.079Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T14:05:07.627Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\LoginForm.cs [Design]",
+              "RelativeToolTip": "LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T14:04:14.263Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminForm.cs [Design]",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\AdminForm.cs",
+              "RelativeDocumentMoniker": "AdminForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\AdminForm.cs [Design]",
+              "RelativeToolTip": "AdminForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T14:01:42.755Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductForm.cs [Design]",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\ProductForm.cs",
+              "RelativeDocumentMoniker": "ProductForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\ProductForm.cs [Design]",
+              "RelativeToolTip": "ProductForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T03:00:20.708Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DetailForm.cs [Design]",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\DetailForm.cs",
+              "RelativeDocumentMoniker": "DetailForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\DetailForm.cs [Design]",
+              "RelativeToolTip": "DetailForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T02:47:54.183Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DetailForm.Designer.cs",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\DetailForm.Designer.cs",
+              "RelativeDocumentMoniker": "DetailForm.Designer.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\DetailForm.Designer.cs",
+              "RelativeToolTip": "DetailForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T02:47:51.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "MainForm.Designer.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\MainForm.Designer.cs",
+              "RelativeToolTip": "MainForm.Designer.cs",
+              "ViewState": "AgIAAC0BAAAAAAAAAAAhwEEBAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T16:51:46.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAALMDAAAAAAAAAADgv8UDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T16:50:39.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CheckoutForm.cs",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\CheckoutForm.cs",
+              "RelativeDocumentMoniker": "CheckoutForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\CheckoutForm.cs",
+              "RelativeToolTip": "CheckoutForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T16:53:19.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CheckoutForm.cs [Design]",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\CheckoutForm.cs",
+              "RelativeDocumentMoniker": "CheckoutForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\CheckoutForm.cs [Design]",
+              "RelativeToolTip": "CheckoutForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T16:42:19.137Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "D:\\TechStoreDesktopApp\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "D:\\TechStoreDesktopApp\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAQwE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T02:48:19.485Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
