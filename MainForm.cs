@@ -31,6 +31,21 @@ namespace TechStoreWinApp
         private readonly Color ColorTextPrimary = Color.Black;
         private readonly Color ColorTextSecondary = Color.FromArgb(64, 64, 64);
 
+        private static bool IsDesignMode()
+        {
+            try
+            {
+                string proc = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
+                if (proc.IndexOf("DesignToolsServer", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    proc.IndexOf("devenv", StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    return true;
+                }
+            }
+            catch { }
+            return System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime;
+        }
+
         public MainForm()
         {
             _db = AppDatabase.Load();
@@ -38,7 +53,7 @@ namespace TechStoreWinApp
             InitializeComponent();
             
             // Design mode check to prevent running runtime wire-ups
-            if (DesignMode || System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+            if (IsDesignMode())
             {
                 lblUserInfo.Text = "Xin chào, Khách Hàng Demo";
                 lblUserRole.Text = "Vai trò: Khách hàng";

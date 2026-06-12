@@ -29,13 +29,28 @@ namespace TechStoreWinApp
             return System.IO.Path.GetDirectoryName(sourceFilePath) ?? "";
         }
 
+        private static bool IsDesignMode()
+        {
+            try
+            {
+                string proc = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
+                if (proc.IndexOf("DesignToolsServer", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    proc.IndexOf("devenv", StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    return true;
+                }
+            }
+            catch { }
+            return System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime;
+        }
+
         public AdminForm()
         {
             _db = AppDatabase.Load();
             _currentUser = new UserAccount { FullName = "Quản trị viên Demo", Username = "admin", Role = "admin" };
             InitializeComponent();
 
-            if (DesignMode || System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+            if (IsDesignMode())
             {
                 lblUserInfo.Text = "Xin chào, Quản trị viên Demo";
                 lblUserRole.Text = "Vai trò: Quản trị viên";
