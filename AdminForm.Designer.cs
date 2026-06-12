@@ -35,8 +35,73 @@ namespace TechStoreWinApp
             line2 = new Panel();
             btnMenuLogout = new Button();
             panelContent = new Panel();
-
-            // 5. Vouchers Controls
+            panelDashboard = new Panel();
+            lblDashboardHeader = new Label();
+            panelAdminMetricsLayout = new TableLayoutPanel();
+            cardRevenue = new Panel();
+            lblTitleRev = new Label();
+            lblStatRevenue = new Label();
+            cardOrders = new Panel();
+            lblTitleOrd = new Label();
+            lblStatOrders = new Label();
+            cardLowStock = new Panel();
+            lblTitleLow = new Label();
+            lblStatLowStock = new Label();
+            cardTotalProd = new Panel();
+            lblTitleTot = new Label();
+            lblStatTotalProducts = new Label();
+            panelAdminChartCard = new Panel();
+            lblAdminChartTitle = new Label();
+            panelChart = new Panel();
+            panelRevenueChart = new Panel();
+            pbRevenueChartMock = new PictureBox();
+            lblRevenueChartTitle = new Label();
+            lstSalesHistory = new ListBox();
+            panelPieChart = new Panel();
+            pbPieChartMock = new PictureBox();
+            lblPieChartTitle = new Label();
+            panelInventory = new Panel();
+            panelInventoryHeader = new Panel();
+            lblInventoryTitle = new Label();
+            txtAdminSearch = new TextBox();
+            btnAdminAddProduct = new Button();
+            dgvInventory = new DataGridView();
+            colInvId = new DataGridViewTextBoxColumn();
+            colInvName = new DataGridViewTextBoxColumn();
+            colInvCategory = new DataGridViewTextBoxColumn();
+            colInvPrice = new DataGridViewTextBoxColumn();
+            colInvStock = new DataGridViewTextBoxColumn();
+            colInvStatus = new DataGridViewTextBoxColumn();
+            colInvEdit = new DataGridViewButtonColumn();
+            colInvDelete = new DataGridViewButtonColumn();
+            panelOrders = new Panel();
+            panelOrdersHeader = new Panel();
+            lblOrdersTitle = new Label();
+            dgvOrders = new DataGridView();
+            colOrdId = new DataGridViewTextBoxColumn();
+            colOrdDate = new DataGridViewTextBoxColumn();
+            colOrdCustomer = new DataGridViewTextBoxColumn();
+            colOrdTotal = new DataGridViewTextBoxColumn();
+            colOrdStatus = new DataGridViewTextBoxColumn();
+            colOrdUserRef = new DataGridViewTextBoxColumn();
+            panelOrdersActions = new Panel();
+            btnOrderDetails = new Button();
+            btnOrderShipping = new Button();
+            btnOrderComplete = new Button();
+            btnOrderCancel = new Button();
+            panelUsers = new Panel();
+            panelUsersHeader = new Panel();
+            lblUsersTitle = new Label();
+            dgvUsers = new DataGridView();
+            colUsrUsername = new DataGridViewTextBoxColumn();
+            colUsrFullName = new DataGridViewTextBoxColumn();
+            colUsrPhone = new DataGridViewTextBoxColumn();
+            colUsrAddress = new DataGridViewTextBoxColumn();
+            colUsrRole = new DataGridViewTextBoxColumn();
+            panelUsersActions = new Panel();
+            btnMakeAdmin = new Button();
+            btnMakeCustomer = new Button();
+            btnDeleteUser = new Button();
             panelVouchers = new Panel();
             panelVouchersHeader = new Panel();
             lblVouchersTitle = new Label();
@@ -56,8 +121,6 @@ namespace TechStoreWinApp
             txtVchMax = new TextBox();
             btnVchAdd = new Button();
             btnVchDelete = new Button();
-
-            // 6. Feedback Controls
             panelFeedback = new Panel();
             panelFeedbackHeader = new Panel();
             lblFeedbackTitle = new Label();
@@ -71,8 +134,6 @@ namespace TechStoreWinApp
             panelFeedbackActions = new Panel();
             btnFeedbackResolve = new Button();
             btnFeedbackDelete = new Button();
-
-            // 7. Settings Controls
             panelSettings = new Panel();
             panelSettingsHeader = new Panel();
             lblSettingsTitle = new Label();
@@ -87,82 +148,6 @@ namespace TechStoreWinApp
             txtSettingsAddress = new TextBox();
             chkSettingsMaintenance = new CheckBox();
             btnSettingsSave = new Button();
-            
-            // 1. Dashboard Controls
-            panelDashboard = new Panel();
-            lblDashboardHeader = new Label();
-            panelAdminMetricsLayout = new TableLayoutPanel();
-            cardRevenue = new Panel();
-            lblTitleRev = new Label();
-            lblStatRevenue = new Label();
-            cardOrders = new Panel();
-            lblTitleOrd = new Label();
-            lblStatOrders = new Label();
-            cardLowStock = new Panel();
-            lblTitleLow = new Label();
-            lblStatLowStock = new Label();
-            cardTotalProd = new Panel();
-            lblTitleTot = new Label();
-            lblStatTotalProducts = new Label();
-            panelAdminChartCard = new Panel();
-            lblAdminChartTitle = new Label();
-            panelChart = new Panel();
-            panelPieChart = new Panel();
-            lstSalesHistory = new ListBox();
-            panelRevenueChart = new Panel();
-            pbPieChartMock = new PictureBox();
-            pbRevenueChartMock = new PictureBox();
-            lblPieChartTitle = new Label();
-            lblRevenueChartTitle = new Label();
-
-            // 2. Inventory Controls
-            panelInventory = new Panel();
-            panelInventoryHeader = new Panel();
-            lblInventoryTitle = new Label();
-            txtAdminSearch = new TextBox();
-            btnAdminAddProduct = new Button();
-            dgvInventory = new DataGridView();
-            colInvId = new DataGridViewTextBoxColumn();
-            colInvName = new DataGridViewTextBoxColumn();
-            colInvCategory = new DataGridViewTextBoxColumn();
-            colInvPrice = new DataGridViewTextBoxColumn();
-            colInvStock = new DataGridViewTextBoxColumn();
-            colInvStatus = new DataGridViewTextBoxColumn();
-            colInvEdit = new DataGridViewButtonColumn();
-            colInvDelete = new DataGridViewButtonColumn();
-
-            // 3. Orders Controls
-            panelOrders = new Panel();
-            panelOrdersHeader = new Panel();
-            lblOrdersTitle = new Label();
-            dgvOrders = new DataGridView();
-            colOrdId = new DataGridViewTextBoxColumn();
-            colOrdDate = new DataGridViewTextBoxColumn();
-            colOrdCustomer = new DataGridViewTextBoxColumn();
-            colOrdTotal = new DataGridViewTextBoxColumn();
-            colOrdStatus = new DataGridViewTextBoxColumn();
-            colOrdUserRef = new DataGridViewTextBoxColumn();
-            panelOrdersActions = new Panel();
-            btnOrderDetails = new Button();
-            btnOrderShipping = new Button();
-            btnOrderComplete = new Button();
-            btnOrderCancel = new Button();
-
-            // 4. Users Controls
-            panelUsers = new Panel();
-            panelUsersHeader = new Panel();
-            lblUsersTitle = new Label();
-            dgvUsers = new DataGridView();
-            colUsrUsername = new DataGridViewTextBoxColumn();
-            colUsrFullName = new DataGridViewTextBoxColumn();
-            colUsrPhone = new DataGridViewTextBoxColumn();
-            colUsrAddress = new DataGridViewTextBoxColumn();
-            colUsrRole = new DataGridViewTextBoxColumn();
-            panelUsersActions = new Panel();
-            btnMakeAdmin = new Button();
-            btnMakeCustomer = new Button();
-            btnDeleteUser = new Button();
-
             panelSidebar.SuspendLayout();
             panelContent.SuspendLayout();
             panelDashboard.SuspendLayout();
@@ -173,6 +158,10 @@ namespace TechStoreWinApp
             cardTotalProd.SuspendLayout();
             panelAdminChartCard.SuspendLayout();
             panelChart.SuspendLayout();
+            panelRevenueChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbRevenueChartMock).BeginInit();
+            panelPieChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbPieChartMock).BeginInit();
             panelInventory.SuspendLayout();
             panelInventoryHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
@@ -184,22 +173,18 @@ namespace TechStoreWinApp
             panelUsersHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsers).BeginInit();
             panelUsersActions.SuspendLayout();
-
             panelVouchers.SuspendLayout();
             panelVouchersHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvVouchers).BeginInit();
             panelVouchersActions.SuspendLayout();
-
             panelFeedback.SuspendLayout();
             panelFeedbackHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFeedback).BeginInit();
             panelFeedbackActions.SuspendLayout();
-
             panelSettings.SuspendLayout();
             panelSettingsHeader.SuspendLayout();
             panelSettingsBody.SuspendLayout();
             SuspendLayout();
-
             // 
             // panelSidebar
             // 
@@ -613,8 +598,6 @@ namespace TechStoreWinApp
             lblAdminChartTitle.TabIndex = 0;
             lblAdminChartTitle.Text = "LỊCH SỬ BIẾN ĐỘNG DOANH THU THEO NGÀY";
             // 
-            // 
-            // 
             // panelChart
             // 
             panelChart.Controls.Add(panelRevenueChart);
@@ -625,72 +608,87 @@ namespace TechStoreWinApp
             panelChart.Size = new Size(970, 450);
             panelChart.TabIndex = 1;
             // 
-            // lstSalesHistory
-            // 
-            lstSalesHistory.BorderStyle = BorderStyle.None;
-            lstSalesHistory.Dock = DockStyle.Left;
-            lstSalesHistory.Width = 280;
-            lstSalesHistory.Font = new Font("Segoe UI", 10F);
-            lstSalesHistory.FormattingEnabled = true;
-            lstSalesHistory.ItemHeight = 17;
-            lstSalesHistory.Location = new Point(0, 0);
-            lstSalesHistory.Name = "lstSalesHistory";
-            lstSalesHistory.Size = new Size(280, 450);
-            lstSalesHistory.TabIndex = 0;
-            lstSalesHistory.Items.AddRange(new object[] { "Ngay: 08/06/2026      | Doanh thu: 2,450,000 d", "Ngay: 09/06/2026      | Doanh thu: 18,490,000 d", "Ngay: 10/06/2026      | Doanh thu: 39,990,000 d", "Ngay: 11/06/2026      | Doanh thu: 67,920,000 d" });
-            // 
-            // panelPieChart
-            // 
-            panelPieChart.Controls.Add(pbPieChartMock);
-            panelPieChart.Controls.Add(lblPieChartTitle);
-            panelPieChart.Dock = DockStyle.Right;
-            panelPieChart.Width = 380;
-            panelPieChart.BackColor = Color.White;
-            panelPieChart.Name = "panelPieChart";
-            panelPieChart.BorderStyle = BorderStyle.None;
-            panelPieChart.Paint += PanelPieChart_Paint;
-            // 
-            // lblPieChartTitle
-            // 
-            lblPieChartTitle.Dock = DockStyle.Top;
-            lblPieChartTitle.Height = 40;
-            lblPieChartTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            lblPieChartTitle.ForeColor = Color.DarkBlue;
-            lblPieChartTitle.Text = "Cơ cấu danh mục sản phẩm trong kho";
-            lblPieChartTitle.TextAlign = ContentAlignment.MiddleLeft;
-            lblPieChartTitle.Name = "lblPieChartTitle";
-            // 
-            // pbPieChartMock
-            // 
-            pbPieChartMock.Dock = DockStyle.Fill;
-            pbPieChartMock.SizeMode = PictureBoxSizeMode.Zoom;
-            pbPieChartMock.Name = "pbPieChartMock";
-            // 
             // panelRevenueChart
             // 
+            panelRevenueChart.BackColor = Color.White;
             panelRevenueChart.Controls.Add(pbRevenueChartMock);
             panelRevenueChart.Controls.Add(lblRevenueChartTitle);
             panelRevenueChart.Dock = DockStyle.Fill;
-            panelRevenueChart.BackColor = Color.White;
+            panelRevenueChart.Location = new Point(280, 0);
             panelRevenueChart.Name = "panelRevenueChart";
-            panelRevenueChart.BorderStyle = BorderStyle.None;
+            panelRevenueChart.Size = new Size(310, 450);
+            panelRevenueChart.TabIndex = 0;
             panelRevenueChart.Paint += PanelRevenueChart_Paint;
-            // 
-            // lblRevenueChartTitle
-            // 
-            lblRevenueChartTitle.Dock = DockStyle.Top;
-            lblRevenueChartTitle.Height = 40;
-            lblRevenueChartTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
-            lblRevenueChartTitle.ForeColor = Color.DarkBlue;
-            lblRevenueChartTitle.Text = "Biến động doanh thu theo ngày";
-            lblRevenueChartTitle.TextAlign = ContentAlignment.MiddleLeft;
-            lblRevenueChartTitle.Name = "lblRevenueChartTitle";
             // 
             // pbRevenueChartMock
             // 
             pbRevenueChartMock.Dock = DockStyle.Fill;
-            pbRevenueChartMock.SizeMode = PictureBoxSizeMode.Zoom;
+            pbRevenueChartMock.Image = Properties.Resources.chart_revenue_mock;
+            pbRevenueChartMock.Location = new Point(0, 40);
             pbRevenueChartMock.Name = "pbRevenueChartMock";
+            pbRevenueChartMock.Size = new Size(310, 410);
+            pbRevenueChartMock.SizeMode = PictureBoxSizeMode.Zoom;
+            pbRevenueChartMock.TabIndex = 0;
+            pbRevenueChartMock.TabStop = false;
+            // 
+            // lblRevenueChartTitle
+            // 
+            lblRevenueChartTitle.Dock = DockStyle.Top;
+            lblRevenueChartTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblRevenueChartTitle.ForeColor = Color.DarkBlue;
+            lblRevenueChartTitle.Location = new Point(0, 0);
+            lblRevenueChartTitle.Name = "lblRevenueChartTitle";
+            lblRevenueChartTitle.Size = new Size(310, 40);
+            lblRevenueChartTitle.TabIndex = 1;
+            lblRevenueChartTitle.Text = "Biến động doanh thu theo ngày";
+            lblRevenueChartTitle.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lstSalesHistory
+            // 
+            lstSalesHistory.BorderStyle = BorderStyle.None;
+            lstSalesHistory.Dock = DockStyle.Left;
+            lstSalesHistory.Font = new Font("Segoe UI", 10F);
+            lstSalesHistory.FormattingEnabled = true;
+            lstSalesHistory.Items.AddRange(new object[] { "Ngay: 08/06/2026      | Doanh thu: 2,450,000 d", "Ngay: 09/06/2026      | Doanh thu: 18,490,000 d", "Ngay: 10/06/2026      | Doanh thu: 39,990,000 d", "Ngay: 11/06/2026      | Doanh thu: 67,920,000 d" });
+            lstSalesHistory.Location = new Point(0, 0);
+            lstSalesHistory.Name = "lstSalesHistory";
+            lstSalesHistory.Size = new Size(280, 450);
+            lstSalesHistory.TabIndex = 0;
+            // 
+            // panelPieChart
+            // 
+            panelPieChart.BackColor = Color.White;
+            panelPieChart.Controls.Add(pbPieChartMock);
+            panelPieChart.Controls.Add(lblPieChartTitle);
+            panelPieChart.Dock = DockStyle.Right;
+            panelPieChart.Location = new Point(590, 0);
+            panelPieChart.Name = "panelPieChart";
+            panelPieChart.Size = new Size(380, 450);
+            panelPieChart.TabIndex = 1;
+            panelPieChart.Paint += PanelPieChart_Paint;
+            // 
+            // pbPieChartMock
+            // 
+            pbPieChartMock.Dock = DockStyle.Fill;
+            pbPieChartMock.Image = Properties.Resources.chart_pie_mock;
+            pbPieChartMock.Location = new Point(0, 40);
+            pbPieChartMock.Name = "pbPieChartMock";
+            pbPieChartMock.Size = new Size(380, 410);
+            pbPieChartMock.SizeMode = PictureBoxSizeMode.Zoom;
+            pbPieChartMock.TabIndex = 0;
+            pbPieChartMock.TabStop = false;
+            // 
+            // lblPieChartTitle
+            // 
+            lblPieChartTitle.Dock = DockStyle.Top;
+            lblPieChartTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblPieChartTitle.ForeColor = Color.DarkBlue;
+            lblPieChartTitle.Location = new Point(0, 0);
+            lblPieChartTitle.Name = "lblPieChartTitle";
+            lblPieChartTitle.Size = new Size(380, 40);
+            lblPieChartTitle.TabIndex = 1;
+            lblPieChartTitle.Text = "Cơ cấu danh mục sản phẩm trong kho";
+            lblPieChartTitle.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panelInventory
             // 
@@ -730,7 +728,7 @@ namespace TechStoreWinApp
             txtAdminSearch.Location = new Point(520, 12);
             txtAdminSearch.Name = "txtAdminSearch";
             txtAdminSearch.PlaceholderText = "Tìm kiếm sản phẩm trong kho...";
-            txtAdminSearch.Size = new Size(280, 25);
+            txtAdminSearch.Size = new Size(280, 24);
             txtAdminSearch.TabIndex = 1;
             // 
             // btnAdminAddProduct
@@ -753,15 +751,7 @@ namespace TechStoreWinApp
             dgvInventory.AllowUserToDeleteRows = false;
             dgvInventory.BackgroundColor = Color.White;
             dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventory.Columns.AddRange(new DataGridViewColumn[] {
-            colInvId,
-            colInvName,
-            colInvCategory,
-            colInvPrice,
-            colInvStock,
-            colInvStatus,
-            colInvEdit,
-            colInvDelete});
+            dgvInventory.Columns.AddRange(new DataGridViewColumn[] { colInvId, colInvName, colInvCategory, colInvPrice, colInvStock, colInvStatus, colInvEdit, colInvDelete });
             dgvInventory.Location = new Point(0, 60);
             dgvInventory.Name = "dgvInventory";
             dgvInventory.ReadOnly = true;
@@ -769,12 +759,6 @@ namespace TechStoreWinApp
             dgvInventory.RowTemplate.Height = 35;
             dgvInventory.Size = new Size(1000, 630);
             dgvInventory.TabIndex = 1;
-            dgvInventory.Rows.Add("p1", "iPhone 15 Pro Max 256GB", "Apple", "29,990,000 d", "12", "Con hang", "Sua", "Xoa");
-            dgvInventory.Rows.Add("p3", "Samsung Galaxy S24 Ultra", "Samsung", "31,990,000 d", "9", "Con hang", "Sua", "Xoa");
-            dgvInventory.Rows.Add("p5", "Xiaomi 14 Ultra 5G", "Xiaomi", "27,990,000 d", "4", "Sap het", "Sua", "Xoa");
-            dgvInventory.Rows.Add("p6", "MacBook Pro 14 inch M3", "Laptop", "39,990,000 d", "8", "Con hang", "Sua", "Xoa");
-            dgvInventory.Rows.Add("p8", "Apple Watch Ultra 2 Titan", "Smartwatch", "21,990,000 d", "3", "Sap het", "Sua", "Xoa");
-            dgvInventory.Rows.Add("p10", "Tai Nghe Sony WH-1000XM5", "Phu kien", "8,490,000 d", "4", "Sap het", "Sua", "Xoa");
             // 
             // colInvId
             // 
@@ -816,7 +800,6 @@ namespace TechStoreWinApp
             colInvStatus.HeaderText = "Trạng thái";
             colInvStatus.Name = "colInvStatus";
             colInvStatus.ReadOnly = true;
-            colInvStatus.Width = 100;
             // 
             // colInvEdit
             // 
@@ -873,25 +856,15 @@ namespace TechStoreWinApp
             dgvOrders.AllowUserToDeleteRows = false;
             dgvOrders.BackgroundColor = Color.White;
             dgvOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOrders.Columns.AddRange(new DataGridViewColumn[] {
-            colOrdId,
-            colOrdDate,
-            colOrdCustomer,
-            colOrdTotal,
-            colOrdStatus,
-            colOrdUserRef});
+            dgvOrders.Columns.AddRange(new DataGridViewColumn[] { colOrdId, colOrdDate, colOrdCustomer, colOrdTotal, colOrdStatus, colOrdUserRef });
             dgvOrders.Location = new Point(0, 60);
             dgvOrders.Name = "dgvOrders";
             dgvOrders.ReadOnly = true;
             dgvOrders.RowHeadersVisible = false;
-            dgvOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvOrders.RowTemplate.Height = 35;
+            dgvOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvOrders.Size = new Size(1000, 560);
             dgvOrders.TabIndex = 1;
-            dgvOrders.Rows.Add("DH182418", "11/06/2026", "Nguyen Van Khach", "8,490,000 d", "Cho xu ly", "user");
-            dgvOrders.Rows.Add("DH165802", "11/06/2026", "Nguyen Van Khach", "8,490,000 d", "Cho xu ly", "user");
-            dgvOrders.Rows.Add("DH1024", "08/06/2026", "Nguyen Van Khach", "2,450,000 d", "Dang giao", "user");
-            dgvOrders.Rows.Add("DH2048", "10/06/2026", "Nguyen Van Khach", "39,990,000 d", "Da giao", "user");
             // 
             // colOrdId
             // 
@@ -933,7 +906,7 @@ namespace TechStoreWinApp
             colOrdUserRef.HeaderText = "UserRef";
             colOrdUserRef.Name = "colOrdUserRef";
             colOrdUserRef.ReadOnly = true;
-            colOrdUserRef.Visible = false; // Hidden reference column
+            colOrdUserRef.Visible = false;
             // 
             // panelOrdersActions
             // 
@@ -1041,22 +1014,15 @@ namespace TechStoreWinApp
             dgvUsers.AllowUserToDeleteRows = false;
             dgvUsers.BackgroundColor = Color.White;
             dgvUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsers.Columns.AddRange(new DataGridViewColumn[] {
-            colUsrUsername,
-            colUsrFullName,
-            colUsrPhone,
-            colUsrAddress,
-            colUsrRole});
+            dgvUsers.Columns.AddRange(new DataGridViewColumn[] { colUsrUsername, colUsrFullName, colUsrPhone, colUsrAddress, colUsrRole });
             dgvUsers.Location = new Point(0, 60);
             dgvUsers.Name = "dgvUsers";
             dgvUsers.ReadOnly = true;
             dgvUsers.RowHeadersVisible = false;
-            dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsers.RowTemplate.Height = 35;
+            dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsers.Size = new Size(1000, 560);
             dgvUsers.TabIndex = 1;
-            dgvUsers.Rows.Add("user", "Nguyen Van Khach", "0987654321", "456 Duong CMT8, Quan 3, TP.HCM", "customer");
-            dgvUsers.Rows.Add("admin", "Tran Quan Tri", "0909090909", "123 Duong Le Loi, Quan 1, TP.HCM", "admin");
             // 
             // colUsrUsername
             // 
@@ -1146,7 +1112,6 @@ namespace TechStoreWinApp
             btnDeleteUser.TabIndex = 2;
             btnDeleteUser.Text = "🗑️ Xóa Tài Khoản";
             btnDeleteUser.UseVisualStyleBackColor = false;
-
             // 
             // panelVouchers
             // 
@@ -1185,23 +1150,15 @@ namespace TechStoreWinApp
             dgvVouchers.AllowUserToDeleteRows = false;
             dgvVouchers.BackgroundColor = Color.White;
             dgvVouchers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVouchers.Columns.AddRange(new DataGridViewColumn[] {
-            colVchCode,
-            colVchDesc,
-            colVchPercent,
-            colVchMax});
+            dgvVouchers.Columns.AddRange(new DataGridViewColumn[] { colVchCode, colVchDesc, colVchPercent, colVchMax });
             dgvVouchers.Location = new Point(0, 60);
             dgvVouchers.Name = "dgvVouchers";
             dgvVouchers.ReadOnly = true;
             dgvVouchers.RowHeadersVisible = false;
-            dgvVouchers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvVouchers.RowTemplate.Height = 35;
+            dgvVouchers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvVouchers.Size = new Size(1000, 430);
             dgvVouchers.TabIndex = 1;
-            dgvVouchers.Rows.Add("TECH10", "Giam 10% tong don hang", "10%", "500,000 d");
-            dgvVouchers.Rows.Add("SALEOFF", "Giam 20% cho khach hang moi", "20%", "200,000 d");
-            dgvVouchers.Rows.Add("FREESHIP", "Giam 5% ho tro phi ship", "5%", "50,000 d");
-            dgvVouchers.Rows.Add("LAPTOP15", "Giam 15% cho don laptop", "15%", "1,000,000 d");
             // 
             // colVchCode
             // 
@@ -1252,51 +1209,67 @@ namespace TechStoreWinApp
             // 
             // lblVchCode
             // 
-            lblVchCode.Location = new Point(20, 20);
-            lblVchCode.Size = new Size(100, 25);
-            lblVchCode.Text = "Mã Voucher:";
             lblVchCode.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblVchCode.Location = new Point(20, 20);
+            lblVchCode.Name = "lblVchCode";
+            lblVchCode.Size = new Size(100, 25);
+            lblVchCode.TabIndex = 0;
+            lblVchCode.Text = "Mã Voucher:";
             // 
             // txtVchCode
             // 
             txtVchCode.Location = new Point(130, 17);
-            txtVchCode.Size = new Size(200, 25);
+            txtVchCode.Name = "txtVchCode";
+            txtVchCode.Size = new Size(200, 24);
+            txtVchCode.TabIndex = 1;
             // 
             // lblVchDesc
             // 
-            lblVchDesc.Location = new Point(380, 20);
-            lblVchDesc.Size = new Size(100, 25);
-            lblVchDesc.Text = "Mô Tả:";
             lblVchDesc.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblVchDesc.Location = new Point(380, 20);
+            lblVchDesc.Name = "lblVchDesc";
+            lblVchDesc.Size = new Size(100, 25);
+            lblVchDesc.TabIndex = 2;
+            lblVchDesc.Text = "Mô Tả:";
             // 
             // txtVchDesc
             // 
             txtVchDesc.Location = new Point(490, 17);
-            txtVchDesc.Size = new Size(450, 25);
+            txtVchDesc.Name = "txtVchDesc";
+            txtVchDesc.Size = new Size(450, 24);
+            txtVchDesc.TabIndex = 3;
             // 
             // lblVchPercent
             // 
-            lblVchPercent.Location = new Point(20, 65);
-            lblVchPercent.Size = new Size(100, 25);
-            lblVchPercent.Text = "% Giảm:";
             lblVchPercent.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblVchPercent.Location = new Point(20, 65);
+            lblVchPercent.Name = "lblVchPercent";
+            lblVchPercent.Size = new Size(100, 25);
+            lblVchPercent.TabIndex = 4;
+            lblVchPercent.Text = "% Giảm:";
             // 
             // txtVchPercent
             // 
             txtVchPercent.Location = new Point(130, 62);
-            txtVchPercent.Size = new Size(200, 25);
+            txtVchPercent.Name = "txtVchPercent";
+            txtVchPercent.Size = new Size(200, 24);
+            txtVchPercent.TabIndex = 5;
             // 
             // lblVchMax
             // 
-            lblVchMax.Location = new Point(380, 65);
-            lblVchMax.Size = new Size(100, 25);
-            lblVchMax.Text = "Giảm Tối Đa (₫):";
             lblVchMax.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblVchMax.Location = new Point(380, 65);
+            lblVchMax.Name = "lblVchMax";
+            lblVchMax.Size = new Size(100, 25);
+            lblVchMax.TabIndex = 6;
+            lblVchMax.Text = "Giảm Tối Đa (₫):";
             // 
             // txtVchMax
             // 
             txtVchMax.Location = new Point(490, 62);
-            txtVchMax.Size = new Size(200, 25);
+            txtVchMax.Name = "txtVchMax";
+            txtVchMax.Size = new Size(200, 24);
+            txtVchMax.TabIndex = 7;
             // 
             // btnVchAdd
             // 
@@ -1325,7 +1298,6 @@ namespace TechStoreWinApp
             btnVchDelete.TabIndex = 9;
             btnVchDelete.Text = "🗑️ Xóa Voucher";
             btnVchDelete.UseVisualStyleBackColor = false;
-
             // 
             // panelFeedback
             // 
@@ -1364,24 +1336,15 @@ namespace TechStoreWinApp
             dgvFeedback.AllowUserToDeleteRows = false;
             dgvFeedback.BackgroundColor = Color.White;
             dgvFeedback.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvFeedback.Columns.AddRange(new DataGridViewColumn[] {
-            colFbId,
-            colFbName,
-            colFbEmail,
-            colFbDate,
-            colFbStatus,
-            colFbMsg});
+            dgvFeedback.Columns.AddRange(new DataGridViewColumn[] { colFbId, colFbName, colFbEmail, colFbDate, colFbStatus, colFbMsg });
             dgvFeedback.Location = new Point(0, 60);
             dgvFeedback.Name = "dgvFeedback";
             dgvFeedback.ReadOnly = true;
             dgvFeedback.RowHeadersVisible = false;
-            dgvFeedback.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvFeedback.RowTemplate.Height = 35;
+            dgvFeedback.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvFeedback.Size = new Size(1000, 560);
             dgvFeedback.TabIndex = 1;
-            dgvFeedback.Rows.Add("FB001", "Nguyen Van Khach", "khachhang@example.com", "11/06/2026", "Moi", "Can tu van them ve iPhone 15 Pro Max va bao hanh.");
-            dgvFeedback.Rows.Add("FB002", "Le Minh Anh", "minhanh@example.com", "10/06/2026", "Da xu ly", "Shop giao hang nhanh, san pham dong goi dep.");
-            dgvFeedback.Rows.Add("FB003", "Tran Hoang", "hoang@example.com", "09/06/2026", "Moi", "Muon hoi them ve chuong trinh giam gia laptop.");
             // 
             // colFbId
             // 
@@ -1463,7 +1426,6 @@ namespace TechStoreWinApp
             btnFeedbackDelete.TabIndex = 1;
             btnFeedbackDelete.Text = "🗑️ Xóa Phản Hồi";
             btnFeedbackDelete.UseVisualStyleBackColor = false;
-
             // 
             // panelSettings
             // 
@@ -1516,67 +1478,85 @@ namespace TechStoreWinApp
             // 
             // lblSettingsStoreName
             // 
-            lblSettingsStoreName.Location = new Point(30, 40);
-            lblSettingsStoreName.Size = new Size(200, 25);
-            lblSettingsStoreName.Text = "Tên Cửa Hàng:";
             lblSettingsStoreName.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblSettingsStoreName.Location = new Point(30, 40);
+            lblSettingsStoreName.Name = "lblSettingsStoreName";
+            lblSettingsStoreName.Size = new Size(200, 25);
+            lblSettingsStoreName.TabIndex = 0;
+            lblSettingsStoreName.Text = "Tên Cửa Hàng:";
             // 
             // txtSettingsStoreName
             // 
-            txtSettingsStoreName.Location = new Point(250, 37);
-            txtSettingsStoreName.Size = new Size(600, 27);
             txtSettingsStoreName.Font = new Font("Segoe UI", 10F);
+            txtSettingsStoreName.Location = new Point(250, 37);
+            txtSettingsStoreName.Name = "txtSettingsStoreName";
+            txtSettingsStoreName.Size = new Size(600, 25);
+            txtSettingsStoreName.TabIndex = 1;
             txtSettingsStoreName.Text = "TechStore";
             // 
             // lblSettingsHotline
             // 
-            lblSettingsHotline.Location = new Point(30, 100);
-            lblSettingsHotline.Size = new Size(200, 25);
-            lblSettingsHotline.Text = "Số Hotline Hỗ Trợ:";
             lblSettingsHotline.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblSettingsHotline.Location = new Point(30, 100);
+            lblSettingsHotline.Name = "lblSettingsHotline";
+            lblSettingsHotline.Size = new Size(200, 25);
+            lblSettingsHotline.TabIndex = 2;
+            lblSettingsHotline.Text = "Số Hotline Hỗ Trợ:";
             // 
             // txtSettingsHotline
             // 
-            txtSettingsHotline.Location = new Point(250, 97);
-            txtSettingsHotline.Size = new Size(600, 27);
             txtSettingsHotline.Font = new Font("Segoe UI", 10F);
+            txtSettingsHotline.Location = new Point(250, 97);
+            txtSettingsHotline.Name = "txtSettingsHotline";
+            txtSettingsHotline.Size = new Size(600, 25);
+            txtSettingsHotline.TabIndex = 3;
             txtSettingsHotline.Text = "1900-1234";
             // 
             // lblSettingsEmail
             // 
-            lblSettingsEmail.Location = new Point(30, 160);
-            lblSettingsEmail.Size = new Size(200, 25);
-            lblSettingsEmail.Text = "Email Chăm Sóc Khách Hàng:";
             lblSettingsEmail.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblSettingsEmail.Location = new Point(30, 160);
+            lblSettingsEmail.Name = "lblSettingsEmail";
+            lblSettingsEmail.Size = new Size(200, 25);
+            lblSettingsEmail.TabIndex = 4;
+            lblSettingsEmail.Text = "Email Chăm Sóc Khách Hàng:";
             // 
             // txtSettingsEmail
             // 
-            txtSettingsEmail.Location = new Point(250, 157);
-            txtSettingsEmail.Size = new Size(600, 27);
             txtSettingsEmail.Font = new Font("Segoe UI", 10F);
+            txtSettingsEmail.Location = new Point(250, 157);
+            txtSettingsEmail.Name = "txtSettingsEmail";
+            txtSettingsEmail.Size = new Size(600, 25);
+            txtSettingsEmail.TabIndex = 5;
             txtSettingsEmail.Text = "support@techstore.com";
             // 
             // lblSettingsAddress
             // 
-            lblSettingsAddress.Location = new Point(30, 220);
-            lblSettingsAddress.Size = new Size(200, 25);
-            lblSettingsAddress.Text = "Địa Chỉ Trụ Sở Cửa Hàng:";
             lblSettingsAddress.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblSettingsAddress.Location = new Point(30, 220);
+            lblSettingsAddress.Name = "lblSettingsAddress";
+            lblSettingsAddress.Size = new Size(200, 25);
+            lblSettingsAddress.TabIndex = 6;
+            lblSettingsAddress.Text = "Địa Chỉ Trụ Sở Cửa Hàng:";
             // 
             // txtSettingsAddress
             // 
-            txtSettingsAddress.Location = new Point(250, 217);
-            txtSettingsAddress.Size = new Size(600, 27);
             txtSettingsAddress.Font = new Font("Segoe UI", 10F);
+            txtSettingsAddress.Location = new Point(250, 217);
+            txtSettingsAddress.Name = "txtSettingsAddress";
+            txtSettingsAddress.Size = new Size(600, 25);
+            txtSettingsAddress.TabIndex = 7;
             txtSettingsAddress.Text = "123 Duong Le Loi, Quan 1, TP. Ho Chi Minh";
             // 
             // chkSettingsMaintenance
             // 
-            chkSettingsMaintenance.Location = new Point(250, 280);
-            chkSettingsMaintenance.Size = new Size(400, 30);
-            chkSettingsMaintenance.Text = "Bật Chế Độ Bảo Trì Hệ Thống (Khóa tính năng Khách Hàng)";
             chkSettingsMaintenance.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             chkSettingsMaintenance.ForeColor = Color.Red;
+            chkSettingsMaintenance.Location = new Point(250, 280);
+            chkSettingsMaintenance.Name = "chkSettingsMaintenance";
+            chkSettingsMaintenance.Size = new Size(400, 30);
+            chkSettingsMaintenance.TabIndex = 8;
+            chkSettingsMaintenance.Text = "Bật Chế Độ Bảo Trì Hệ Thống (Khóa tính năng Khách Hàng)";
             // 
             // btnSettingsSave
             // 
@@ -1591,7 +1571,6 @@ namespace TechStoreWinApp
             btnSettingsSave.TabIndex = 8;
             btnSettingsSave.Text = "💾 Lưu Cấu Hình Hệ Thống";
             btnSettingsSave.UseVisualStyleBackColor = false;
-
             // 
             // AdminForm
             // 
@@ -1616,6 +1595,10 @@ namespace TechStoreWinApp
             cardTotalProd.ResumeLayout(false);
             panelAdminChartCard.ResumeLayout(false);
             panelChart.ResumeLayout(false);
+            panelRevenueChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbRevenueChartMock).EndInit();
+            panelPieChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbPieChartMock).EndInit();
             panelInventory.ResumeLayout(false);
             panelInventoryHeader.ResumeLayout(false);
             panelInventoryHeader.PerformLayout();
@@ -1628,7 +1611,6 @@ namespace TechStoreWinApp
             panelUsersHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvUsers).EndInit();
             panelUsersActions.ResumeLayout(false);
-
             panelVouchers.ResumeLayout(false);
             panelVouchersHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvVouchers).EndInit();
