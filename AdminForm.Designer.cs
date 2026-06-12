@@ -109,6 +109,7 @@ namespace TechStoreWinApp
             panelChart = new Panel();
             panelPieChart = new Panel();
             lstSalesHistory = new ListBox();
+            panelRevenueChart = new Panel();
 
             // 2. Inventory Controls
             panelInventory = new Panel();
@@ -609,8 +610,10 @@ namespace TechStoreWinApp
             lblAdminChartTitle.Text = "LỊCH SỬ BIẾN ĐỘNG DOANH THU THEO NGÀY";
             // 
             // 
+            // 
             // panelChart
             // 
+            panelChart.Controls.Add(panelRevenueChart);
             panelChart.Controls.Add(lstSalesHistory);
             panelChart.Controls.Add(panelPieChart);
             panelChart.Location = new Point(15, 45);
@@ -622,24 +625,32 @@ namespace TechStoreWinApp
             // 
             lstSalesHistory.BorderStyle = BorderStyle.None;
             lstSalesHistory.Dock = DockStyle.Left;
-            lstSalesHistory.Width = 460;
+            lstSalesHistory.Width = 280;
             lstSalesHistory.Font = new Font("Segoe UI", 10F);
             lstSalesHistory.FormattingEnabled = true;
             lstSalesHistory.ItemHeight = 17;
             lstSalesHistory.Location = new Point(0, 0);
             lstSalesHistory.Name = "lstSalesHistory";
-            lstSalesHistory.Size = new Size(460, 450);
+            lstSalesHistory.Size = new Size(280, 450);
             lstSalesHistory.TabIndex = 0;
             lstSalesHistory.Items.AddRange(new object[] { "Ngay: 08/06/2026      | Doanh thu: 2,450,000 d", "Ngay: 09/06/2026      | Doanh thu: 18,490,000 d", "Ngay: 10/06/2026      | Doanh thu: 39,990,000 d", "Ngay: 11/06/2026      | Doanh thu: 67,920,000 d" });
             // 
             // panelPieChart
             // 
             panelPieChart.Dock = DockStyle.Right;
-            panelPieChart.Width = 480;
+            panelPieChart.Width = 380;
             panelPieChart.BackColor = Color.White;
             panelPieChart.Name = "panelPieChart";
             panelPieChart.BorderStyle = BorderStyle.None;
             panelPieChart.Paint += PanelPieChart_Paint;
+            // 
+            // panelRevenueChart
+            // 
+            panelRevenueChart.Dock = DockStyle.Fill;
+            panelRevenueChart.BackColor = Color.White;
+            panelRevenueChart.Name = "panelRevenueChart";
+            panelRevenueChart.BorderStyle = BorderStyle.None;
+            panelRevenueChart.Paint += PanelRevenueChart_Paint;
             // 
             // panelInventory
             // 
@@ -1630,6 +1641,7 @@ namespace TechStoreWinApp
         private Panel panelChart;
         private ListBox lstSalesHistory;
         private Panel panelPieChart;
+        private Panel panelRevenueChart;
 
         // 2. Inventory Controls
         private Panel panelInventory;

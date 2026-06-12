@@ -31,6 +31,31 @@ namespace TechStoreWinApp
         private readonly Color ColorTextPrimary = Color.Black;
         private readonly Color ColorTextSecondary = Color.FromArgb(64, 64, 64);
 
+        public MainForm()
+        {
+            _db = AppDatabase.Load();
+            _currentUser = new UserAccount { FullName = "Khách Hàng Demo", Username = "demo", Role = "customer" };
+            InitializeComponent();
+            
+            // Design mode check to prevent running runtime wire-ups
+            if (DesignMode || System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+            {
+                lblUserInfo.Text = "Xin chào, Khách Hàng Demo";
+                lblUserRole.Text = "Vai trò: Khách hàng";
+                return;
+            }
+
+            cbPriceFilter.SelectedIndex = 0;
+            cbSortFilter.SelectedIndex = 0;
+            lblUserInfo.Text = $"Xin chào, {_currentUser.FullName}";
+            lblUserRole.Text = "Vai trò: Khách hàng";
+
+            ApplySystemSettings();
+            WireMenuEvents();
+            LoadState();
+            SwitchPage("home");
+        }
+
         public MainForm(UserAccount loggedInUser)
         {
             _db = AppDatabase.Load();

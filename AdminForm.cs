@@ -24,6 +24,26 @@ namespace TechStoreWinApp
         private readonly Color ColorTextPrimary = Color.Black;
         private readonly Color ColorTextSecondary = Color.FromArgb(64, 64, 64);
 
+        public AdminForm()
+        {
+            _db = AppDatabase.Load();
+            _currentUser = new UserAccount { FullName = "Quản trị viên Demo", Username = "admin", Role = "admin" };
+            InitializeComponent();
+
+            if (DesignMode || System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+            {
+                lblUserInfo.Text = "Xin chào, Quản trị viên Demo";
+                lblUserRole.Text = "Vai trò: Quản trị viên";
+                return;
+            }
+
+            lblUserInfo.Text = $"Xin chào, {_currentUser.FullName}";
+            lblUserRole.Text = "Vai trò: Quản trị viên";
+
+            WireEvents();
+            SwitchPage("dashboard");
+        }
+
         public AdminForm(UserAccount loggedInUser)
         {
             _db = AppDatabase.Load();
@@ -192,8 +212,9 @@ namespace TechStoreWinApp
                 }
             }
 
-            // Redraw pie chart
+            // Redraw pie chart and revenue chart
             panelPieChart.Invalidate();
+            panelRevenueChart.Invalidate();
         }
 
         // ==========================================================================
@@ -742,6 +763,135 @@ namespace TechStoreWinApp
                 legendY += 30;
 
                 currentAngle += sweepAngle;
+            }
+        }
+
+        private void PanelRevenueChart_Paint(object? sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            // Clear background
+            g.Clear(Color.White);
+
+            // Fetch data (fallback if empty or at design-time)
+            List<SalesRecord> history;
+            if (DesignMode || System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime || _db == null || _db.Sales == null || _db.Sales.History == null || _db.Sales.History.Count == 0)
+            {
+                history = new List<SalesRecord>
+                {
+                    new SalesRecord { Date = "04/06", Amount = 15400000 },
+                    new SalesRecord { Date = "05/06", Amount = 29990000 },
+                    new SalesRecord { Date = "06/06", Amount = 8490000 },
+                    new SalesRecord { Date = "07/06", Amount = 45990000 },
+                    new SalesRecord { Date = "08/06", Amount = 2450000 },
+                    new SalesRecord { Date = "09/06", Amount = 39990000 },
+                    new SalesRecord { Date = "10/06", Amount = 3490000 }
+                };
+            }
+            else
+            {
+                history = _db.Sales.History;
+            }
+
+            // Draw Title
+            using (Font titleFont = new Font("Segoe UI", 10.5F, FontStyle.Bold))
+            {
+                g.DrawString("Biến động doanh thu theo ngày", titleFont, Brushes.DarkBlue, new PointF(10, 20));
+            }
+
+            if (history.Count == 0) return;
+
+            // Chart area bounds
+            int paddingLeft = 55;
+            int paddingRight = 20;
+            int paddingTop = 60;
+            int paddingBottom = 40;
+
+            int width = panelRevenueChart.Width;
+            int height = panelRevenueChart.Height;
+
+            int chartWidth = width - paddingLeft - paddingRight;
+            int chartHeight = height - paddingTop - paddingBottom;
+
+            decimal maxAmount = history.Max(h => h.Amount);
+            if (maxAmount <= 0) maxAmount = 1;
+
+            // Draw Y-Axis lines and labels
+            using (Pen gridPen = new Pen(Color.FromArgb(235, 235, 235), 1))
+            using (Font labelFont = new Font("Segoe UI", 8F))
+            {
+                int yGridLines = 4;
+                for (int i = 0; i <= yGridLines; i++)
+                {
+                    float y = paddingTop + chartHeight - (chartHeight * i / (float)yGridLines);
+                    g.DrawLine(gridPen, paddingLeft, y, width - paddingRight, y);
+
+                    decimal gridVal = maxAmount * i / yGridLines;
+                    string label = string.Format("{0:N0} d", gridVal);
+                    if (gridVal >= 1000000)
+                    {
+                        label = string.Format("{0:0.#}M d", gridVal / 1000000m);
+                    }
+                    g.DrawString(label, labelFont, Brushes.Gray, new PointF(5, y - 6));
+                }
+            }
+
+            // Draw X-Axis labels & Bar/Line points
+            float xStep = (float)chartWidth / Math.Max(1, history.Count - 1);
+            if (history.Count == 1) xStep = chartWidth;
+
+            PointF[] points = new PointF[history.Count];
+            for (int i = 0; i < history.Count; i++)
+            {
+                float x = paddingLeft + (i * xStep);
+                float y = paddingTop + chartHeight - (float)((decimal)chartHeight * history[i].Amount / maxAmount);
+                points[i] = new PointF(x, y);
+
+                // Draw X-Axis labels
+                using (Font labelFont = new Font("Segoe UI", 8F))
+                {
+                    string dateLabel = history[i].Date;
+                    g.DrawString(dateLabel, labelFont, Brushes.Gray, new PointF(x - 12, paddingTop + chartHeight + 8));
+                }
+            }
+
+            // Draw Line / Bars
+            if (points.Length > 1)
+            {
+                // Draw filled gradient area under the curve
+                using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
+                {
+                    path.AddLine(points[0].X, paddingTop + chartHeight, points[0].X, points[0].Y);
+                    for (int i = 1; i < points.Length; i++)
+                    {
+                        path.AddLine(points[i - 1].X, points[i - 1].Y, points[i].X, points[i].Y);
+                    }
+                    path.AddLine(points[points.Length - 1].X, points[points.Length - 1].Y, points[points.Length - 1].X, paddingTop + chartHeight);
+                    path.CloseFigure();
+
+                    using (System.Drawing.Drawing2D.LinearGradientBrush areaBrush = new System.Drawing.Drawing2D.LinearGradientBrush(
+                        new PointF(0, paddingTop),
+                        new PointF(0, paddingTop + chartHeight),
+                        Color.FromArgb(80, Color.RoyalBlue),
+                        Color.FromArgb(5, Color.RoyalBlue)))
+                    {
+                        g.FillPath(areaBrush, path);
+                    }
+                }
+
+                // Draw connecting line
+                using (Pen linePen = new Pen(Color.RoyalBlue, 2.5f))
+                {
+                    g.DrawLines(linePen, points);
+                }
+            }
+
+            // Draw data point circles
+            foreach (var pt in points)
+            {
+                g.FillEllipse(Brushes.White, pt.X - 4, pt.Y - 4, 8, 8);
+                g.DrawEllipse(Pens.RoyalBlue, pt.X - 4, pt.Y - 4, 8, 8);
             }
         }
     }
