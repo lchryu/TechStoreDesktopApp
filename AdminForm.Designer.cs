@@ -759,6 +759,13 @@ namespace TechStoreWinApp
             dgvInventory.RowTemplate.Height = 35;
             dgvInventory.Size = new Size(1000, 630);
             dgvInventory.TabIndex = 1;
+            dgvInventory.Rows.Add("p1", "iPhone 15 Pro Max 256GB", "phone_apple", "29,990,000 d", "12", "Con hang");
+            dgvInventory.Rows.Add("p2", "iPhone 14 128GB Black", "phone_apple", "18,490,000 d", "6", "Con hang");
+            dgvInventory.Rows.Add("p3", "Samsung Galaxy S24 Ultra", "phone_samsung", "31,990,000 d", "9", "Con hang");
+            dgvInventory.Rows.Add("p5", "Xiaomi 14 Ultra 5G", "phone_xiaomi", "27,990,000 d", "4", "Sap het hang");
+            dgvInventory.Rows.Add("p6", "MacBook Pro 14 inch M3", "laptop", "39,990,000 d", "8", "Con hang");
+            dgvInventory.Rows.Add("p8", "Apple Watch Ultra 2 Titan", "watch", "21,990,000 d", "3", "Sap het hang");
+            dgvInventory.Rows.Add("p10", "Tai Nghe Sony WH-1000XM5", "accessory", "8,490,000 d", "4", "Sap het hang");
             // 
             // colInvId
             // 
@@ -865,6 +872,9 @@ namespace TechStoreWinApp
             dgvOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvOrders.Size = new Size(1000, 560);
             dgvOrders.TabIndex = 1;
+            dgvOrders.Rows.Add("DH182418", "11/06/2026", "Nguyen Van Khach", "8,490,000 d", "Cho xu ly", "user");
+            dgvOrders.Rows.Add("DH165802", "11/06/2026", "Nguyen Van Khach", "8,490,000 d", "Cho xu ly", "user");
+            dgvOrders.Rows.Add("DH1024", "08/06/2026", "Nguyen Van Khach", "2,450,000 d", "Dang giao", "user");
             // 
             // colOrdId
             // 
@@ -1023,6 +1033,8 @@ namespace TechStoreWinApp
             dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsers.Size = new Size(1000, 560);
             dgvUsers.TabIndex = 1;
+            dgvUsers.Rows.Add("user", "Nguyen Van Khach", "0987654321", "456 Duong CMT8, Quan 3, TP. Ho Chi Minh", "Khach Hang");
+            dgvUsers.Rows.Add("admin", "Tran Quan Tri", "0909090909", "123 Duong Le Loi, Quan 1, TP. Ho Chi Minh", "Quan Tri Vien");
             // 
             // colUsrUsername
             // 
@@ -1159,6 +1171,13 @@ namespace TechStoreWinApp
             dgvVouchers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvVouchers.Size = new Size(1000, 430);
             dgvVouchers.TabIndex = 1;
+            dgvVouchers.Rows.Add("TECH10", "Giam 10% tong don hang (Toi da 500k)", "10%", "500,000 d");
+            dgvVouchers.Rows.Add("SALEOFF", "Giam 20% cho khach hang moi (Toi da 200k)", "20%", "200,000 d");
+            dgvVouchers.Rows.Add("FREESHIP", "Giam 5% ho tro phi ship (Toi da 50k)", "5%", "50,000 d");
+            dgvVouchers.Rows.Add("LAPTOP15", "Giam 15% cho don laptop (Toi da 1 trieu)", "15%", "1,000,000 d");
+            dgvVouchers.Rows.Add("APPLE500", "Giam 8% khi mua san pham Apple (Toi da 500k)", "8%", "500,000 d");
+            dgvVouchers.Rows.Add("WELCOME25", "Giam 25% cho don hang dau tien (Toi da 300k)", "25%", "300,000 d");
+            dgvVouchers.Rows.Add("FLASH50", "Giam 50% trong khung gio flash sale (Toi da 150k)", "50%", "150,000 d");
             // 
             // colVchCode
             // 
@@ -1345,6 +1364,12 @@ namespace TechStoreWinApp
             dgvFeedback.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvFeedback.Size = new Size(1000, 560);
             dgvFeedback.TabIndex = 1;
+            dgvFeedback.Rows.Add("FB01", "Nguyen Van Khach", "user@example.com", "08/06/2026", "Da giai quyet", "San pham iPhone 15 Pro Max dung rat tot, nhan vien tu van nhiet tinh...");
+            dgvFeedback.Rows.Add("FB02", "Le Thi Lan", "lanle@gmail.com", "10/06/2026", "Cho xu ly", "Toi muon hoi che do bao hanh cua Macbook Pro M3 the nao?");
+            dgvFeedback.Rows.Add("FB03", "Pham Minh Quan", "quanpm@gmail.com", "11/06/2026", "Da giai quyet", "Shop giao Galaxy S24 Ultra nhanh, may nguyen seal va giong nhu mo ta...");
+            dgvFeedback.Rows.Add("FB04", "Hoang Thu Trang", "trang.ht@example.com", "11/06/2026", "Cho xu ly", "Minh can xuat hoa don cong ty cho don mua laptop, shop ho tro minh voi.");
+            dgvFeedback.Rows.Add("FB05", "Dang Huu Phuc", "phuc.dang@gmail.com", "09/06/2026", "Cho xu ly", "Tai nghe am thanh tot nhung hop hoi mop mot goc, mong shop dong goi ky hon.");
+            dgvFeedback.Rows.Add("FB06", "Bui Khanh Linh", "linhbk@example.com", "07/06/2026", "Da giai quyet", "Nhan vien tu van dung nhu cau, minh chon duoc Apple Watch rat ung y.");
             // 
             // colFbId
             // 
