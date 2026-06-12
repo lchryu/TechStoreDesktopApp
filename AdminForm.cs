@@ -24,6 +24,11 @@ namespace TechStoreWinApp
         private readonly Color ColorTextPrimary = Color.Black;
         private readonly Color ColorTextSecondary = Color.FromArgb(64, 64, 64);
 
+        private static string GetProjectDirectory([System.Runtime.CompilerServices.CallerFilePath] string sourceFilePath = "")
+        {
+            return System.IO.Path.GetDirectoryName(sourceFilePath) ?? "";
+        }
+
         public AdminForm()
         {
             _db = AppDatabase.Load();
@@ -34,6 +39,22 @@ namespace TechStoreWinApp
             {
                 lblUserInfo.Text = "Xin chào, Quản trị viên Demo";
                 lblUserRole.Text = "Vai trò: Quản trị viên";
+
+                try
+                {
+                    string projDir = GetProjectDirectory();
+                    string piePath = System.IO.Path.Combine(projDir, "chart_pie_mock.png");
+                    string revPath = System.IO.Path.Combine(projDir, "chart_revenue_mock.png");
+
+                    if (System.IO.File.Exists(piePath))
+                        pbPieChartMock.Image = Image.FromFile(piePath);
+                    if (System.IO.File.Exists(revPath))
+                        pbRevenueChartMock.Image = Image.FromFile(revPath);
+                }
+                catch
+                {
+                    // Fail silently to prevent designer crash
+                }
                 return;
             }
 

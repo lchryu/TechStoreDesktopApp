@@ -650,7 +650,6 @@ namespace TechStoreWinApp
             // pbPieChartMock
             // 
             pbPieChartMock.Dock = DockStyle.Fill;
-            pbPieChartMock.ImageLocation = "chart_pie_mock.png";
             pbPieChartMock.SizeMode = PictureBoxSizeMode.Zoom;
             pbPieChartMock.Name = "pbPieChartMock";
             // 
@@ -666,7 +665,6 @@ namespace TechStoreWinApp
             // pbRevenueChartMock
             // 
             pbRevenueChartMock.Dock = DockStyle.Fill;
-            pbRevenueChartMock.ImageLocation = "chart_revenue_mock.png";
             pbRevenueChartMock.SizeMode = PictureBoxSizeMode.Zoom;
             pbRevenueChartMock.Name = "pbRevenueChartMock";
             // 
