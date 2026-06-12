@@ -429,7 +429,6 @@ namespace TechStoreWinApp
             panelDashboard.Name = "panelDashboard";
             panelDashboard.Size = new Size(1000, 710);
             panelDashboard.TabIndex = 0;
-            panelDashboard.Visible = false;
             // 
             // lblDashboardHeader
             // 
@@ -489,7 +488,7 @@ namespace TechStoreWinApp
             lblStatRevenue.Name = "lblStatRevenue";
             lblStatRevenue.Size = new Size(210, 30);
             lblStatRevenue.TabIndex = 1;
-            lblStatRevenue.Text = "0 ₫";
+            lblStatRevenue.Text = "128,850,000 d";
             // 
             // cardOrders
             // 
@@ -521,7 +520,7 @@ namespace TechStoreWinApp
             lblStatOrders.Name = "lblStatOrders";
             lblStatOrders.Size = new Size(210, 30);
             lblStatOrders.TabIndex = 1;
-            lblStatOrders.Text = "0";
+            lblStatOrders.Text = "6";
             // 
             // cardLowStock
             // 
@@ -553,7 +552,7 @@ namespace TechStoreWinApp
             lblStatLowStock.Name = "lblStatLowStock";
             lblStatLowStock.Size = new Size(210, 30);
             lblStatLowStock.TabIndex = 1;
-            lblStatLowStock.Text = "0";
+            lblStatLowStock.Text = "4";
             // 
             // cardTotalProd
             // 
@@ -585,7 +584,7 @@ namespace TechStoreWinApp
             lblStatTotalProducts.Name = "lblStatTotalProducts";
             lblStatTotalProducts.Size = new Size(210, 30);
             lblStatTotalProducts.TabIndex = 1;
-            lblStatTotalProducts.Text = "0";
+            lblStatTotalProducts.Text = "21";
             // 
             // panelAdminChartCard
             // 
@@ -631,6 +630,7 @@ namespace TechStoreWinApp
             lstSalesHistory.Name = "lstSalesHistory";
             lstSalesHistory.Size = new Size(460, 450);
             lstSalesHistory.TabIndex = 0;
+            lstSalesHistory.Items.AddRange(new object[] { "Ngay: 08/06/2026      | Doanh thu: 2,450,000 d", "Ngay: 09/06/2026      | Doanh thu: 18,490,000 d", "Ngay: 10/06/2026      | Doanh thu: 39,990,000 d", "Ngay: 11/06/2026      | Doanh thu: 67,920,000 d" });
             // 
             // panelPieChart
             // 
@@ -639,6 +639,7 @@ namespace TechStoreWinApp
             panelPieChart.BackColor = Color.White;
             panelPieChart.Name = "panelPieChart";
             panelPieChart.BorderStyle = BorderStyle.None;
+            panelPieChart.Paint += PanelPieChart_Paint;
             // 
             // panelInventory
             // 
@@ -717,6 +718,12 @@ namespace TechStoreWinApp
             dgvInventory.RowTemplate.Height = 35;
             dgvInventory.Size = new Size(1000, 630);
             dgvInventory.TabIndex = 1;
+            dgvInventory.Rows.Add("p1", "iPhone 15 Pro Max 256GB", "Apple", "29,990,000 d", "12", "Con hang", "Sua", "Xoa");
+            dgvInventory.Rows.Add("p3", "Samsung Galaxy S24 Ultra", "Samsung", "31,990,000 d", "9", "Con hang", "Sua", "Xoa");
+            dgvInventory.Rows.Add("p5", "Xiaomi 14 Ultra 5G", "Xiaomi", "27,990,000 d", "4", "Sap het", "Sua", "Xoa");
+            dgvInventory.Rows.Add("p6", "MacBook Pro 14 inch M3", "Laptop", "39,990,000 d", "8", "Con hang", "Sua", "Xoa");
+            dgvInventory.Rows.Add("p8", "Apple Watch Ultra 2 Titan", "Smartwatch", "21,990,000 d", "3", "Sap het", "Sua", "Xoa");
+            dgvInventory.Rows.Add("p10", "Tai Nghe Sony WH-1000XM5", "Phu kien", "8,490,000 d", "4", "Sap het", "Sua", "Xoa");
             // 
             // colInvId
             // 
@@ -830,6 +837,10 @@ namespace TechStoreWinApp
             dgvOrders.RowTemplate.Height = 35;
             dgvOrders.Size = new Size(1000, 560);
             dgvOrders.TabIndex = 1;
+            dgvOrders.Rows.Add("DH182418", "11/06/2026", "Nguyen Van Khach", "8,490,000 d", "Cho xu ly", "user");
+            dgvOrders.Rows.Add("DH165802", "11/06/2026", "Nguyen Van Khach", "8,490,000 d", "Cho xu ly", "user");
+            dgvOrders.Rows.Add("DH1024", "08/06/2026", "Nguyen Van Khach", "2,450,000 d", "Dang giao", "user");
+            dgvOrders.Rows.Add("DH2048", "10/06/2026", "Nguyen Van Khach", "39,990,000 d", "Da giao", "user");
             // 
             // colOrdId
             // 
@@ -993,6 +1004,8 @@ namespace TechStoreWinApp
             dgvUsers.RowTemplate.Height = 35;
             dgvUsers.Size = new Size(1000, 560);
             dgvUsers.TabIndex = 1;
+            dgvUsers.Rows.Add("user", "Nguyen Van Khach", "0987654321", "456 Duong CMT8, Quan 3, TP.HCM", "customer");
+            dgvUsers.Rows.Add("admin", "Tran Quan Tri", "0909090909", "123 Duong Le Loi, Quan 1, TP.HCM", "admin");
             // 
             // colUsrUsername
             // 
@@ -1134,6 +1147,10 @@ namespace TechStoreWinApp
             dgvVouchers.RowTemplate.Height = 35;
             dgvVouchers.Size = new Size(1000, 430);
             dgvVouchers.TabIndex = 1;
+            dgvVouchers.Rows.Add("TECH10", "Giam 10% tong don hang", "10%", "500,000 d");
+            dgvVouchers.Rows.Add("SALEOFF", "Giam 20% cho khach hang moi", "20%", "200,000 d");
+            dgvVouchers.Rows.Add("FREESHIP", "Giam 5% ho tro phi ship", "5%", "50,000 d");
+            dgvVouchers.Rows.Add("LAPTOP15", "Giam 15% cho don laptop", "15%", "1,000,000 d");
             // 
             // colVchCode
             // 
@@ -1311,6 +1328,9 @@ namespace TechStoreWinApp
             dgvFeedback.RowTemplate.Height = 35;
             dgvFeedback.Size = new Size(1000, 560);
             dgvFeedback.TabIndex = 1;
+            dgvFeedback.Rows.Add("FB001", "Nguyen Van Khach", "khachhang@example.com", "11/06/2026", "Moi", "Can tu van them ve iPhone 15 Pro Max va bao hanh.");
+            dgvFeedback.Rows.Add("FB002", "Le Minh Anh", "minhanh@example.com", "10/06/2026", "Da xu ly", "Shop giao hang nhanh, san pham dong goi dep.");
+            dgvFeedback.Rows.Add("FB003", "Tran Hoang", "hoang@example.com", "09/06/2026", "Moi", "Muon hoi them ve chuong trinh giam gia laptop.");
             // 
             // colFbId
             // 
@@ -1455,6 +1475,7 @@ namespace TechStoreWinApp
             txtSettingsStoreName.Location = new Point(250, 37);
             txtSettingsStoreName.Size = new Size(600, 27);
             txtSettingsStoreName.Font = new Font("Segoe UI", 10F);
+            txtSettingsStoreName.Text = "TechStore";
             // 
             // lblSettingsHotline
             // 
@@ -1468,6 +1489,7 @@ namespace TechStoreWinApp
             txtSettingsHotline.Location = new Point(250, 97);
             txtSettingsHotline.Size = new Size(600, 27);
             txtSettingsHotline.Font = new Font("Segoe UI", 10F);
+            txtSettingsHotline.Text = "1900-1234";
             // 
             // lblSettingsEmail
             // 
@@ -1481,6 +1503,7 @@ namespace TechStoreWinApp
             txtSettingsEmail.Location = new Point(250, 157);
             txtSettingsEmail.Size = new Size(600, 27);
             txtSettingsEmail.Font = new Font("Segoe UI", 10F);
+            txtSettingsEmail.Text = "support@techstore.com";
             // 
             // lblSettingsAddress
             // 
@@ -1494,6 +1517,7 @@ namespace TechStoreWinApp
             txtSettingsAddress.Location = new Point(250, 217);
             txtSettingsAddress.Size = new Size(600, 27);
             txtSettingsAddress.Font = new Font("Segoe UI", 10F);
+            txtSettingsAddress.Text = "123 Duong Le Loi, Quan 1, TP. Ho Chi Minh";
             // 
             // chkSettingsMaintenance
             // 

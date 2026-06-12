@@ -68,6 +68,7 @@ namespace TechStoreWinApp
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new Size(360, 25);
             this.txtUsername.TabIndex = 2;
+            this.txtUsername.Text = "khachmoi";
             // 
             // lblPass
             // 
@@ -88,6 +89,7 @@ namespace TechStoreWinApp
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new Size(360, 25);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.Text = "123456";
             // 
             // lblFullName
             // 
@@ -107,6 +109,7 @@ namespace TechStoreWinApp
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new Size(360, 25);
             this.txtFullName.TabIndex = 6;
+            this.txtFullName.Text = "Pham Khach Moi";
             // 
             // lblPhone
             // 
@@ -126,6 +129,7 @@ namespace TechStoreWinApp
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new Size(360, 25);
             this.txtPhone.TabIndex = 8;
+            this.txtPhone.Text = "0912345678";
             // 
             // lblAddress
             // 
@@ -145,6 +149,7 @@ namespace TechStoreWinApp
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new Size(360, 25);
             this.txtAddress.TabIndex = 10;
+            this.txtAddress.Text = "12 Nguyen Trai, Quan 5, TP.HCM";
             // 
             // lblQuestion
             // 
@@ -170,6 +175,7 @@ namespace TechStoreWinApp
             this.cbSecurityQuestion.Name = "cbSecurityQuestion";
             this.cbSecurityQuestion.Size = new Size(360, 25);
             this.cbSecurityQuestion.TabIndex = 12;
+            this.cbSecurityQuestion.Text = "Tên mẹ của bạn là gì?";
             // 
             // lblAnswer
             // 
@@ -189,6 +195,7 @@ namespace TechStoreWinApp
             this.txtSecurityAnswer.Name = "txtSecurityAnswer";
             this.txtSecurityAnswer.Size = new Size(360, 25);
             this.txtSecurityAnswer.TabIndex = 14;
+            this.txtSecurityAnswer.Text = "Nguyen Thi A";
             // 
             // btnRegister
             // 

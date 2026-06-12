@@ -86,6 +86,7 @@ namespace TechStoreWinApp
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(270, 28);
             this.txtName.TabIndex = 3;
+            this.txtName.Text = "iPhone 15 Pro Max 256GB";
             // 
             // lblCategory
             // 
@@ -105,6 +106,8 @@ namespace TechStoreWinApp
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(270, 28);
             this.cbCategory.TabIndex = 5;
+            this.cbCategory.Items.AddRange(new object[] { "phone_apple", "phone_samsung", "phone_xiaomi", "laptop", "watch", "accessory" });
+            this.cbCategory.Text = "phone_apple";
             // 
             // lblPrice
             // 
@@ -124,6 +127,7 @@ namespace TechStoreWinApp
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(270, 28);
             this.txtPrice.TabIndex = 7;
+            this.txtPrice.Text = "29990000";
             // 
             // lblStock
             // 
@@ -143,6 +147,7 @@ namespace TechStoreWinApp
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(270, 28);
             this.txtStock.TabIndex = 9;
+            this.txtStock.Text = "12";
             // 
             // lblImage
             // 
@@ -162,6 +167,7 @@ namespace TechStoreWinApp
             this.txtImageUrl.Name = "txtImageUrl";
             this.txtImageUrl.Size = new System.Drawing.Size(580, 28);
             this.txtImageUrl.TabIndex = 11;
+            this.txtImageUrl.Text = "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80";
             // 
             // lblSuggestions
             // 
@@ -250,6 +256,7 @@ namespace TechStoreWinApp
             this.txtDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDesc.Size = new System.Drawing.Size(580, 75);
             this.txtDesc.TabIndex = 18;
+            this.txtDesc.Text = "Mau dien thoai cao cap voi thiet ke titan, hieu nang manh, camera chat luong cao va man hinh sac net.";
             // 
             // lblSpecs
             // 
@@ -270,6 +277,7 @@ namespace TechStoreWinApp
             this.txtSpecs.PlaceholderText = "Ví dụ: M3 Pro Chip, 18GB RAM, 512GB SSD";
             this.txtSpecs.Size = new System.Drawing.Size(580, 28);
             this.txtSpecs.TabIndex = 20;
+            this.txtSpecs.Text = "A17 Pro, 256GB, Camera 48MP, Man hinh 6.7 inch";
             // 
             // footerPanel
             // 

@@ -71,6 +71,7 @@ namespace TechStoreWinApp
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImage.TabIndex = 0;
             this.pbImage.TabStop = false;
+            this.pbImage.ImageLocation = "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80";
             // 
             // lblPrice
             // 
@@ -80,7 +81,7 @@ namespace TechStoreWinApp
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(300, 30);
             this.lblPrice.TabIndex = 1;
-            this.lblPrice.Text = "Giá: 0 ₫";
+            this.lblPrice.Text = "Gia: 29,990,000 d";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblStock
@@ -91,7 +92,7 @@ namespace TechStoreWinApp
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(300, 25);
             this.lblStock.TabIndex = 2;
-            this.lblStock.Text = "Trạng thái: Còn hàng";
+            this.lblStock.Text = "Trang thai: Con hang (12)";
             this.lblStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // rightPanel
@@ -118,7 +119,7 @@ namespace TechStoreWinApp
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(350, 20);
             this.lblCategory.TabIndex = 0;
-            this.lblCategory.Text = "DANH MỤC";
+            this.lblCategory.Text = "DIEN THOAI APPLE";
             // 
             // lblName
             // 
@@ -128,7 +129,7 @@ namespace TechStoreWinApp
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(350, 40);
             this.lblName.TabIndex = 1;
-            this.lblName.Text = "Tên Sản Phẩm";
+            this.lblName.Text = "iPhone 15 Pro Max 256GB";
             // 
             // lblDescTitle
             // 
@@ -152,6 +153,7 @@ namespace TechStoreWinApp
             this.txtDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDesc.Size = new System.Drawing.Size(350, 85);
             this.txtDesc.TabIndex = 3;
+            this.txtDesc.Text = "Mau iPhone cao cap voi thiet ke titan, camera manh me, man hinh sac net va hieu nang phu hop cho cong viec lan giai tri.";
             // 
             // lblSpecsTitle
             // 
@@ -172,6 +174,7 @@ namespace TechStoreWinApp
             this.lstSpecs.Name = "lstSpecs";
             this.lstSpecs.Size = new System.Drawing.Size(350, 140);
             this.lstSpecs.TabIndex = 5;
+            this.lstSpecs.Items.AddRange(new object[] { "Man hinh Super Retina XDR 6.7 inch", "Chip Apple A17 Pro", "Bo nho 256GB", "Camera chinh 48MP", "Bao hanh chinh hang 12 thang" });
             // 
             // footerPanel
             // 
@@ -243,6 +246,7 @@ namespace TechStoreWinApp
             this.lstReviews.Name = "lstReviews";
             this.lstReviews.Size = new System.Drawing.Size(668, 110);
             this.lstReviews.TabIndex = 1;
+            this.lstReviews.Items.AddRange(new object[] { "Nguyen Van Khach - 5 sao: May dep, chay rat muot.", "Le Minh Anh - 4 sao: Camera tot, giao hang nhanh.", "Tran Hoang - 5 sao: Dong goi can than, dung hang chinh hang." });
             // 
             // lblUserReviewTitle
             // 
@@ -260,6 +264,7 @@ namespace TechStoreWinApp
             this.txtUserComment.Name = "txtUserComment";
             this.txtUserComment.Size = new System.Drawing.Size(320, 25);
             this.txtUserComment.TabIndex = 2;
+            this.txtUserComment.Text = "San pham dung nhu mo ta";
             // 
             // cbUserStars
             // 
@@ -269,6 +274,8 @@ namespace TechStoreWinApp
             this.cbUserStars.Name = "cbUserStars";
             this.cbUserStars.Size = new System.Drawing.Size(80, 25);
             this.cbUserStars.TabIndex = 3;
+            this.cbUserStars.Items.AddRange(new object[] { "5 sao", "4 sao", "3 sao", "2 sao", "1 sao" });
+            this.cbUserStars.Text = "5 sao";
             // 
             // btnSubmitReview
             // 

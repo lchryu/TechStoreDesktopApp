@@ -20,6 +20,7 @@ namespace TechStoreWinApp
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             panelSidebar = new Panel();
             lblLogo = new Label();
             lblUserInfo = new Label();
@@ -38,31 +39,18 @@ namespace TechStoreWinApp
             btnMenuAbout = new Button();
             btnMenuLogout = new Button();
             panelContent = new Panel();
-            
-            // 1. Home Panel
             panelHome = new Panel();
             panelHomeHero = new Panel();
             lblHomeHeroTitle = new Label();
             lblHomeHeroSub = new Label();
             lblHomeFeaturedHeader = new Label();
             flpHomeFeatured = new FlowLayoutPanel();
-            
-            // 2. Shop Panel
             panelShop = new Panel();
             lblCategoryTitle = new Label();
-            txtCustomerSearch = new TextBox();
-            flpProducts = new FlowLayoutPanel();
             cbPriceFilter = new ComboBox();
             cbSortFilter = new ComboBox();
-            
-            // Voucher controls
-            lblVoucherTitle = new Label();
-            cbVoucher = new ComboBox();
-            btnApplyVoucher = new Button();
-            lblVoucherDiscount = new Label();
-            lblVoucherFinalTotal = new Label();
-            
-            // 3. Cart Panel
+            txtCustomerSearch = new TextBox();
+            flpProducts = new FlowLayoutPanel();
             panelCartView = new Panel();
             lblCartTitle = new Label();
             panelCartLeftCol = new Panel();
@@ -79,9 +67,12 @@ namespace TechStoreWinApp
             txtCheckoutAddress = new TextBox();
             lblCartCheckoutPayment = new Label();
             cbCheckoutPayment = new ComboBox();
+            lblVoucherTitle = new Label();
+            cbVoucher = new ComboBox();
+            btnApplyVoucher = new Button();
+            lblVoucherDiscount = new Label();
+            lblVoucherFinalTotal = new Label();
             btnPlaceOrderSubmit = new Button();
-            
-            // 4. Profile Panel
             panelProfile = new Panel();
             lblProfileTitle = new Label();
             panelProfileLeftCol = new Panel();
@@ -97,13 +88,9 @@ namespace TechStoreWinApp
             panelProfileRightCol = new Panel();
             lblProfileRightTitle = new Label();
             lstOrderHistory = new ListBox();
-            
-            // 5. News Panel
             panelNews = new Panel();
             lblNewsTitle = new Label();
             flpNews = new FlowLayoutPanel();
-            
-            // 6. About Panel
             panelAbout = new Panel();
             lblAboutTitle = new Label();
             panelAboutLeft = new Panel();
@@ -117,7 +104,6 @@ namespace TechStoreWinApp
             lblAboutMsg = new Label();
             txtAboutMsg = new TextBox();
             btnSendAboutMsg = new Button();
-
             panelSidebar.SuspendLayout();
             panelContent.SuspendLayout();
             panelHome.SuspendLayout();
@@ -134,7 +120,6 @@ namespace TechStoreWinApp
             panelAboutLeft.SuspendLayout();
             panelAboutRight.SuspendLayout();
             SuspendLayout();
-
             // 
             // panelSidebar
             // 
@@ -315,7 +300,7 @@ namespace TechStoreWinApp
             btnMenuCart.Padding = new Padding(10, 0, 0, 0);
             btnMenuCart.Size = new Size(210, 35);
             btnMenuCart.TabIndex = 10;
-            btnMenuCart.Text = "🛒 Giỏ Hàng (0)";
+            btnMenuCart.Text = "\U0001f6d2 Giỏ Hàng (0)";
             btnMenuCart.TextAlign = ContentAlignment.MiddleLeft;
             btnMenuCart.UseVisualStyleBackColor = false;
             // 
@@ -399,12 +384,12 @@ namespace TechStoreWinApp
             // panelContent
             // 
             panelContent.BackColor = Color.FromArgb(240, 240, 240);
+            panelContent.Controls.Add(panelCartView);
+            panelContent.Controls.Add(panelAbout);
+            panelContent.Controls.Add(panelNews);
             panelContent.Controls.Add(panelHome);
             panelContent.Controls.Add(panelShop);
-            panelContent.Controls.Add(panelCartView);
             panelContent.Controls.Add(panelProfile);
-            panelContent.Controls.Add(panelNews);
-            panelContent.Controls.Add(panelAbout);
             panelContent.Dock = DockStyle.Fill;
             panelContent.Location = new Point(240, 0);
             panelContent.Name = "panelContent";
@@ -424,7 +409,6 @@ namespace TechStoreWinApp
             panelHome.Name = "panelHome";
             panelHome.Size = new Size(1000, 710);
             panelHome.TabIndex = 0;
-            panelHome.Visible = false;
             // 
             // panelHomeHero
             // 
@@ -504,27 +488,6 @@ namespace TechStoreWinApp
             lblCategoryTitle.TabIndex = 0;
             lblCategoryTitle.Text = "Cửa Hàng";
             // 
-            // txtCustomerSearch
-            // 
-            txtCustomerSearch.BackColor = Color.White;
-            txtCustomerSearch.BorderStyle = BorderStyle.FixedSingle;
-            txtCustomerSearch.ForeColor = Color.Black;
-            txtCustomerSearch.Location = new Point(750, 5);
-            txtCustomerSearch.Name = "txtCustomerSearch";
-            txtCustomerSearch.PlaceholderText = "Tìm kiếm sản phẩm...";
-            txtCustomerSearch.Size = new Size(250, 24);
-            txtCustomerSearch.TabIndex = 1;
-            txtCustomerSearch.TextChanged += TxtCustomerSearch_TextChanged;
-            // 
-            // flpProducts
-            // 
-            flpProducts.AutoScroll = true;
-            flpProducts.Location = new Point(0, 50);
-            flpProducts.Name = "flpProducts";
-            flpProducts.Padding = new Padding(0, 10, 0, 10);
-            flpProducts.Size = new Size(1000, 650);
-            flpProducts.TabIndex = 2;
-            // 
             // cbPriceFilter
             // 
             cbPriceFilter.BackColor = Color.White;
@@ -546,6 +509,27 @@ namespace TechStoreWinApp
             cbSortFilter.Name = "cbSortFilter";
             cbSortFilter.Size = new Size(160, 25);
             cbSortFilter.TabIndex = 4;
+            // 
+            // txtCustomerSearch
+            // 
+            txtCustomerSearch.BackColor = Color.White;
+            txtCustomerSearch.BorderStyle = BorderStyle.FixedSingle;
+            txtCustomerSearch.ForeColor = Color.Black;
+            txtCustomerSearch.Location = new Point(750, 5);
+            txtCustomerSearch.Name = "txtCustomerSearch";
+            txtCustomerSearch.PlaceholderText = "Tìm kiếm sản phẩm...";
+            txtCustomerSearch.Size = new Size(250, 24);
+            txtCustomerSearch.TabIndex = 1;
+            txtCustomerSearch.TextChanged += TxtCustomerSearch_TextChanged;
+            // 
+            // flpProducts
+            // 
+            flpProducts.AutoScroll = true;
+            flpProducts.Location = new Point(0, 50);
+            flpProducts.Name = "flpProducts";
+            flpProducts.Padding = new Padding(0, 10, 0, 10);
+            flpProducts.Size = new Size(1000, 650);
+            flpProducts.TabIndex = 2;
             // 
             // panelCartView
             // 
@@ -609,7 +593,7 @@ namespace TechStoreWinApp
             lblCartTotalAmount.Name = "lblCartTotalAmount";
             lblCartTotalAmount.Size = new Size(550, 30);
             lblCartTotalAmount.TabIndex = 2;
-            lblCartTotalAmount.Text = "Tổng phụ: 0 ₫";
+            lblCartTotalAmount.Text = "Tong phu: 60,470,000 d";
             lblCartTotalAmount.TextAlign = ContentAlignment.MiddleRight;
             // 
             // panelCartRightCol
@@ -665,6 +649,7 @@ namespace TechStoreWinApp
             txtCheckoutName.Name = "txtCheckoutName";
             txtCheckoutName.Size = new Size(360, 24);
             txtCheckoutName.TabIndex = 2;
+            txtCheckoutName.Text = "Nguyen Van Khach";
             // 
             // lblCartCheckoutPhone
             // 
@@ -684,6 +669,7 @@ namespace TechStoreWinApp
             txtCheckoutPhone.Name = "txtCheckoutPhone";
             txtCheckoutPhone.Size = new Size(360, 24);
             txtCheckoutPhone.TabIndex = 4;
+            txtCheckoutPhone.Text = "0987654321";
             // 
             // lblCartCheckoutAddress
             // 
@@ -703,6 +689,7 @@ namespace TechStoreWinApp
             txtCheckoutAddress.Name = "txtCheckoutAddress";
             txtCheckoutAddress.Size = new Size(360, 24);
             txtCheckoutAddress.TabIndex = 6;
+            txtCheckoutAddress.Text = "456 Duong CMT8, Quan 3, TP.HCM";
             // 
             // lblCartCheckoutPayment
             // 
@@ -724,7 +711,6 @@ namespace TechStoreWinApp
             cbCheckoutPayment.Size = new Size(360, 25);
             cbCheckoutPayment.TabIndex = 8;
             // 
-            // 
             // lblVoucherTitle
             // 
             lblVoucherTitle.ForeColor = Color.FromArgb(64, 64, 64);
@@ -739,6 +725,7 @@ namespace TechStoreWinApp
             cbVoucher.BackColor = Color.White;
             cbVoucher.DropDownStyle = ComboBoxStyle.DropDownList;
             cbVoucher.ForeColor = Color.Black;
+            cbVoucher.Items.AddRange(new object[] { "TECH10 - Giam 10%", "APPLE500 - Giam 8%", "FREESHIP - Giam 5%" });
             cbVoucher.Location = new Point(20, 330);
             cbVoucher.Name = "cbVoucher";
             cbVoucher.Size = new Size(230, 25);
@@ -766,8 +753,7 @@ namespace TechStoreWinApp
             lblVoucherDiscount.Name = "lblVoucherDiscount";
             lblVoucherDiscount.Size = new Size(360, 20);
             lblVoucherDiscount.TabIndex = 12;
-            lblVoucherDiscount.Text = "Đã giảm: 0 ₫";
-            lblVoucherDiscount.Visible = false;
+            lblVoucherDiscount.Text = "Da giam: 500,000 d";
             // 
             // lblVoucherFinalTotal
             // 
@@ -777,8 +763,7 @@ namespace TechStoreWinApp
             lblVoucherFinalTotal.Name = "lblVoucherFinalTotal";
             lblVoucherFinalTotal.Size = new Size(360, 22);
             lblVoucherFinalTotal.TabIndex = 13;
-            lblVoucherFinalTotal.Text = "Tổng thanh toán: 0 ₫";
-            lblVoucherFinalTotal.Visible = false;
+            lblVoucherFinalTotal.Text = "Tong thanh toan: 59,970,000 d";
             // 
             // btnPlaceOrderSubmit
             // 
@@ -875,6 +860,7 @@ namespace TechStoreWinApp
             txtProfFullName.Name = "txtProfFullName";
             txtProfFullName.Size = new Size(380, 24);
             txtProfFullName.TabIndex = 3;
+            txtProfFullName.Text = "Nguyen Van Khach";
             // 
             // lblProfilePhone
             // 
@@ -894,6 +880,7 @@ namespace TechStoreWinApp
             txtProfPhone.Name = "txtProfPhone";
             txtProfPhone.Size = new Size(380, 24);
             txtProfPhone.TabIndex = 5;
+            txtProfPhone.Text = "0987654321";
             // 
             // lblProfileAddress
             // 
@@ -914,6 +901,7 @@ namespace TechStoreWinApp
             txtProfAddress.Name = "txtProfAddress";
             txtProfAddress.Size = new Size(380, 80);
             txtProfAddress.TabIndex = 7;
+            txtProfAddress.Text = "456 Duong CMT8, Quan 3, TP. Ho Chi Minh";
             // 
             // btnProfileSave
             // 
@@ -958,9 +946,10 @@ namespace TechStoreWinApp
             lstOrderHistory.BorderStyle = BorderStyle.FixedSingle;
             lstOrderHistory.Font = new Font("Segoe UI", 9F);
             lstOrderHistory.ForeColor = Color.Black;
+            lstOrderHistory.Items.AddRange(new object[] { "DH182418 | 11/06/2026 | Tai Nghe Sony WH-1000XM5 x1 | 8,490,000 d | Cho xu ly", "DH165802 | 11/06/2026 | Samsung Galaxy Watch6 Classic x1 | 8,490,000 d | Cho xu ly", "DH1024 | 08/06/2026 | Ban Phim Co Keychron K2 Pro x1 | 2,450,000 d | Dang giao" });
             lstOrderHistory.Location = new Point(20, 45);
             lstOrderHistory.Name = "lstOrderHistory";
-            lstOrderHistory.Size = new Size(520, 580);
+            lstOrderHistory.Size = new Size(520, 572);
             lstOrderHistory.TabIndex = 1;
             // 
             // panelNews
@@ -1037,7 +1026,7 @@ namespace TechStoreWinApp
             lblAboutText.Name = "lblAboutText";
             lblAboutText.Size = new Size(438, 608);
             lblAboutText.TabIndex = 0;
-            lblAboutText.Text = "⚡ SIÊU THỊ CÔNG NGHỆ TECHSTORE\r\n\r\nChào mừng quý khách đến với TechStore - Hệ thống bán lẻ điện thoại di động, đồng hồ thông minh và phụ kiện chính hãng hàng đầu tại Việt Nam.\r\n\r\n📍 Địa chỉ cửa hàng:\r\nSố 123 Đường Lê Lợi, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh.\r\n\r\n📞 Hotline hỗ trợ khách hàng:\r\n- Tư vấn mua hàng: 1800.2088 (miễn phí)\r\n- Hỗ trợ kỹ thuật: 1900.2099 (1.000đ/phút)\r\n\r\n✉️ Email liên hệ:\r\ncontact@techstore.com.vn\r\n\r\n⏰ Giờ mở cửa làm việc:\r\nTất cả các ngày trong tuần (kể cả Chủ nhật và ngày Lễ):\r\nTừ 08:00 đến 22:00 hàng ngày.\r\n\r\n🏆 CAM KẾT CỦA CỬA HÀNG:\r\n1. Sản phẩm chính hãng 100%, bảo hành 12 tháng.\r\n2. Hỗ trợ 1 đổi 1 trong 30 ngày nếu có lỗi phần cứng từ nhà sản xuất.\r\n3. Giao hàng siêu tốc tận nhà toàn quốc.";
+            lblAboutText.Text = resources.GetString("lblAboutText.Text");
             // 
             // panelAboutRight
             // 
@@ -1045,32 +1034,10 @@ namespace TechStoreWinApp
             panelAboutRight.BorderStyle = BorderStyle.FixedSingle;
             panelAboutRight.Controls.Add(lblAboutFormTitle);
             panelAboutRight.Controls.Add(lblAboutName);
-            txtAboutName.BackColor = Color.White;
-            txtAboutName.BorderStyle = BorderStyle.FixedSingle;
-            txtAboutName.ForeColor = Color.Black;
-            txtAboutName.Location = new Point(20, 95);
-            txtAboutName.Name = "txtAboutName";
-            txtAboutName.Size = new Size(440, 24);
-            txtAboutName.TabIndex = 2;
             panelAboutRight.Controls.Add(txtAboutName);
             panelAboutRight.Controls.Add(lblAboutEmail);
-            txtAboutEmail.BackColor = Color.White;
-            txtAboutEmail.BorderStyle = BorderStyle.FixedSingle;
-            txtAboutEmail.ForeColor = Color.Black;
-            txtAboutEmail.Location = new Point(20, 160);
-            txtAboutEmail.Name = "txtAboutEmail";
-            txtAboutEmail.Size = new Size(440, 24);
-            txtAboutEmail.TabIndex = 4;
             panelAboutRight.Controls.Add(txtAboutEmail);
             panelAboutRight.Controls.Add(lblAboutMsg);
-            txtAboutMsg.BackColor = Color.White;
-            txtAboutMsg.BorderStyle = BorderStyle.FixedSingle;
-            txtAboutMsg.ForeColor = Color.Black;
-            txtAboutMsg.Location = new Point(20, 225);
-            txtAboutMsg.Multiline = true;
-            txtAboutMsg.Name = "txtAboutMsg";
-            txtAboutMsg.Size = new Size(440, 180);
-            txtAboutMsg.TabIndex = 6;
             panelAboutRight.Controls.Add(txtAboutMsg);
             panelAboutRight.Controls.Add(btnSendAboutMsg);
             panelAboutRight.Location = new Point(500, 50);
@@ -1098,6 +1065,17 @@ namespace TechStoreWinApp
             lblAboutName.TabIndex = 1;
             lblAboutName.Text = "Họ và tên người liên hệ *";
             // 
+            // txtAboutName
+            // 
+            txtAboutName.BackColor = Color.White;
+            txtAboutName.BorderStyle = BorderStyle.FixedSingle;
+            txtAboutName.ForeColor = Color.Black;
+            txtAboutName.Location = new Point(20, 95);
+            txtAboutName.Name = "txtAboutName";
+            txtAboutName.Size = new Size(440, 24);
+            txtAboutName.TabIndex = 2;
+            txtAboutName.Text = "Nguyen Van Khach";
+            // 
             // lblAboutEmail
             // 
             lblAboutEmail.ForeColor = Color.FromArgb(64, 64, 64);
@@ -1107,6 +1085,17 @@ namespace TechStoreWinApp
             lblAboutEmail.TabIndex = 3;
             lblAboutEmail.Text = "Địa chỉ Email liên hệ *";
             // 
+            // txtAboutEmail
+            // 
+            txtAboutEmail.BackColor = Color.White;
+            txtAboutEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtAboutEmail.ForeColor = Color.Black;
+            txtAboutEmail.Location = new Point(20, 160);
+            txtAboutEmail.Name = "txtAboutEmail";
+            txtAboutEmail.Size = new Size(440, 24);
+            txtAboutEmail.TabIndex = 4;
+            txtAboutEmail.Text = "khachhang@example.com";
+            // 
             // lblAboutMsg
             // 
             lblAboutMsg.ForeColor = Color.FromArgb(64, 64, 64);
@@ -1115,6 +1104,18 @@ namespace TechStoreWinApp
             lblAboutMsg.Size = new Size(440, 18);
             lblAboutMsg.TabIndex = 5;
             lblAboutMsg.Text = "Nội dung phản hồi / góp ý *";
+            // 
+            // txtAboutMsg
+            // 
+            txtAboutMsg.BackColor = Color.White;
+            txtAboutMsg.BorderStyle = BorderStyle.FixedSingle;
+            txtAboutMsg.ForeColor = Color.Black;
+            txtAboutMsg.Location = new Point(20, 225);
+            txtAboutMsg.Multiline = true;
+            txtAboutMsg.Name = "txtAboutMsg";
+            txtAboutMsg.Size = new Size(440, 180);
+            txtAboutMsg.TabIndex = 6;
+            txtAboutMsg.Text = "Toi muon duoc tu van them ve iPhone 15 Pro Max va chuong trinh bao hanh cua TechStore.";
             // 
             // btnSendAboutMsg
             // 
@@ -1147,7 +1148,6 @@ namespace TechStoreWinApp
             panelSidebar.ResumeLayout(false);
             panelContent.ResumeLayout(false);
             panelHome.ResumeLayout(false);
-            panelHome.PerformLayout();
             panelHomeHero.ResumeLayout(false);
             panelHomeHero.PerformLayout();
             panelShop.ResumeLayout(false);
@@ -1165,6 +1165,725 @@ namespace TechStoreWinApp
             panelAboutLeft.ResumeLayout(false);
             panelAboutRight.ResumeLayout(false);
             panelAboutRight.PerformLayout();
+            // --- Preview Cards Instantiations ---
+            cardFeatured1 = new Panel();
+            pbFeatured1 = new PictureBox();
+            lblNameFeatured1 = new Label();
+            lblPriceFeatured1 = new Label();
+            lblStockFeatured1 = new Label();
+            btnBuyFeatured1 = new Button();
+
+            cardFeatured2 = new Panel();
+            pbFeatured2 = new PictureBox();
+            lblNameFeatured2 = new Label();
+            lblPriceFeatured2 = new Label();
+            lblStockFeatured2 = new Label();
+            btnBuyFeatured2 = new Button();
+
+            cardFeatured3 = new Panel();
+            pbFeatured3 = new PictureBox();
+            lblNameFeatured3 = new Label();
+            lblPriceFeatured3 = new Label();
+            lblStockFeatured3 = new Label();
+            btnBuyFeatured3 = new Button();
+
+            cardShop1 = new Panel();
+            pbShop1 = new PictureBox();
+            lblNameShop1 = new Label();
+            lblPriceShop1 = new Label();
+            lblStockShop1 = new Label();
+            btnBuyShop1 = new Button();
+
+            cardShop2 = new Panel();
+            pbShop2 = new PictureBox();
+            lblNameShop2 = new Label();
+            lblPriceShop2 = new Label();
+            lblStockShop2 = new Label();
+            btnBuyShop2 = new Button();
+
+            cardShop3 = new Panel();
+            pbShop3 = new PictureBox();
+            lblNameShop3 = new Label();
+            lblPriceShop3 = new Label();
+            lblStockShop3 = new Label();
+            btnBuyShop3 = new Button();
+
+            cardShop4 = new Panel();
+            pbShop4 = new PictureBox();
+            lblNameShop4 = new Label();
+            lblPriceShop4 = new Label();
+            lblStockShop4 = new Label();
+            btnBuyShop4 = new Button();
+
+            rowCart1 = new Panel();
+            pbCart1 = new PictureBox();
+            lblNameCart1 = new Label();
+            lblPriceCart1 = new Label();
+            btnMinusCart1 = new Button();
+            lblQtyCart1 = new Label();
+            btnPlusCart1 = new Button();
+            lblRowTotalCart1 = new Label();
+            btnRemoveCart1 = new Button();
+
+            rowCart2 = new Panel();
+            pbCart2 = new PictureBox();
+            lblNameCart2 = new Label();
+            lblPriceCart2 = new Label();
+            btnMinusCart2 = new Button();
+            lblQtyCart2 = new Label();
+            btnPlusCart2 = new Button();
+            lblRowTotalCart2 = new Label();
+            btnRemoveCart2 = new Button();
+
+            rowCart3 = new Panel();
+            pbCart3 = new PictureBox();
+            lblNameCart3 = new Label();
+            lblPriceCart3 = new Label();
+            btnMinusCart3 = new Button();
+            lblQtyCart3 = new Label();
+            btnPlusCart3 = new Button();
+            lblRowTotalCart3 = new Label();
+            btnRemoveCart3 = new Button();
+
+            cardNews1 = new Panel();
+            lblTitleNews1 = new Label();
+            lblSummaryNews1 = new Label();
+            btnReadMoreNews1 = new Button();
+
+            cardNews2 = new Panel();
+            lblTitleNews2 = new Label();
+            lblSummaryNews2 = new Label();
+            btnReadMoreNews2 = new Button();
+
+            cardNews3 = new Panel();
+            lblTitleNews3 = new Label();
+            lblSummaryNews3 = new Label();
+            btnReadMoreNews3 = new Button();
+
+            // --- Home Featured Preview ---
+            cardFeatured1.Size = new Size(270, 310);
+            cardFeatured1.BackColor = Color.White;
+            cardFeatured1.BorderStyle = BorderStyle.FixedSingle;
+            cardFeatured1.Margin = new Padding(0, 0, 25, 25);
+            cardFeatured1.Padding = new Padding(12);
+            cardFeatured1.Controls.Add(pbFeatured1);
+            cardFeatured1.Controls.Add(lblNameFeatured1);
+            cardFeatured1.Controls.Add(lblPriceFeatured1);
+            cardFeatured1.Controls.Add(lblStockFeatured1);
+            cardFeatured1.Controls.Add(btnBuyFeatured1);
+
+            pbFeatured1.Size = new Size(246, 130);
+            pbFeatured1.Location = new Point(12, 12);
+            pbFeatured1.SizeMode = PictureBoxSizeMode.Zoom;
+            pbFeatured1.BackColor = Color.FromArgb(240, 240, 240);
+            pbFeatured1.ImageLocation = "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80";
+
+            lblNameFeatured1.Text = "iPhone 15 Pro Max 256GB";
+            lblNameFeatured1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblNameFeatured1.ForeColor = Color.Black;
+            lblNameFeatured1.Location = new Point(12, 152);
+            lblNameFeatured1.Size = new Size(246, 40);
+            lblNameFeatured1.AutoEllipsis = true;
+
+            lblPriceFeatured1.Text = "29,990,000 d";
+            lblPriceFeatured1.Font = new Font("Segoe UI", 11.5F, FontStyle.Bold);
+            lblPriceFeatured1.ForeColor = Color.Red;
+            lblPriceFeatured1.Location = new Point(12, 195);
+            lblPriceFeatured1.Size = new Size(130, 25);
+
+            lblStockFeatured1.Text = "Con hang (12)";
+            lblStockFeatured1.Font = new Font("Segoe UI", 8.5F, FontStyle.Italic);
+            lblStockFeatured1.ForeColor = Color.FromArgb(16, 185, 129);
+            lblStockFeatured1.Location = new Point(12, 225);
+            lblStockFeatured1.Size = new Size(246, 20);
+
+            btnBuyFeatured1.Text = "Them vao gio";
+            btnBuyFeatured1.Location = new Point(12, 255);
+            btnBuyFeatured1.Size = new Size(246, 35);
+            btnBuyFeatured1.BackColor = Color.RoyalBlue;
+            btnBuyFeatured1.ForeColor = Color.White;
+            btnBuyFeatured1.FlatStyle = FlatStyle.Flat;
+            btnBuyFeatured1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnBuyFeatured1.FlatAppearance.BorderSize = 0;
+
+            cardFeatured2.Size = new Size(270, 310);
+            cardFeatured2.BackColor = Color.White;
+            cardFeatured2.BorderStyle = BorderStyle.FixedSingle;
+            cardFeatured2.Margin = new Padding(0, 0, 25, 25);
+            cardFeatured2.Padding = new Padding(12);
+            cardFeatured2.Controls.Add(pbFeatured2);
+            cardFeatured2.Controls.Add(lblNameFeatured2);
+            cardFeatured2.Controls.Add(lblPriceFeatured2);
+            cardFeatured2.Controls.Add(lblStockFeatured2);
+            cardFeatured2.Controls.Add(btnBuyFeatured2);
+
+            pbFeatured2.Size = new Size(246, 130);
+            pbFeatured2.Location = new Point(12, 12);
+            pbFeatured2.SizeMode = PictureBoxSizeMode.Zoom;
+            pbFeatured2.BackColor = Color.FromArgb(240, 240, 240);
+            pbFeatured2.ImageLocation = "https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=500&q=80";
+
+            lblNameFeatured2.Text = "iPhone 14 128GB Black";
+            lblNameFeatured2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblNameFeatured2.ForeColor = Color.Black;
+            lblNameFeatured2.Location = new Point(12, 152);
+            lblNameFeatured2.Size = new Size(246, 40);
+            lblNameFeatured2.AutoEllipsis = true;
+
+            lblPriceFeatured2.Text = "18,490,000 d";
+            lblPriceFeatured2.Font = new Font("Segoe UI", 11.5F, FontStyle.Bold);
+            lblPriceFeatured2.ForeColor = Color.Red;
+            lblPriceFeatured2.Location = new Point(12, 195);
+            lblPriceFeatured2.Size = new Size(130, 25);
+
+            lblStockFeatured2.Text = "Con hang (6)";
+            lblStockFeatured2.Font = new Font("Segoe UI", 8.5F, FontStyle.Italic);
+            lblStockFeatured2.ForeColor = Color.FromArgb(16, 185, 129);
+            lblStockFeatured2.Location = new Point(12, 225);
+            lblStockFeatured2.Size = new Size(246, 20);
+
+            btnBuyFeatured2.Text = "Them vao gio";
+            btnBuyFeatured2.Location = new Point(12, 255);
+            btnBuyFeatured2.Size = new Size(246, 35);
+            btnBuyFeatured2.BackColor = Color.RoyalBlue;
+            btnBuyFeatured2.ForeColor = Color.White;
+            btnBuyFeatured2.FlatStyle = FlatStyle.Flat;
+            btnBuyFeatured2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnBuyFeatured2.FlatAppearance.BorderSize = 0;
+
+            cardFeatured3.Size = new Size(270, 310);
+            cardFeatured3.BackColor = Color.White;
+            cardFeatured3.BorderStyle = BorderStyle.FixedSingle;
+            cardFeatured3.Margin = new Padding(0, 0, 25, 25);
+            cardFeatured3.Padding = new Padding(12);
+            cardFeatured3.Controls.Add(pbFeatured3);
+            cardFeatured3.Controls.Add(lblNameFeatured3);
+            cardFeatured3.Controls.Add(lblPriceFeatured3);
+            cardFeatured3.Controls.Add(lblStockFeatured3);
+            cardFeatured3.Controls.Add(btnBuyFeatured3);
+
+            pbFeatured3.Size = new Size(246, 130);
+            pbFeatured3.Location = new Point(12, 12);
+            pbFeatured3.SizeMode = PictureBoxSizeMode.Zoom;
+            pbFeatured3.BackColor = Color.FromArgb(240, 240, 240);
+            pbFeatured3.ImageLocation = "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=500&q=80";
+
+            lblNameFeatured3.Text = "iPhone 15 128GB Yellow";
+            lblNameFeatured3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblNameFeatured3.ForeColor = Color.Black;
+            lblNameFeatured3.Location = new Point(12, 152);
+            lblNameFeatured3.Size = new Size(246, 40);
+            lblNameFeatured3.AutoEllipsis = true;
+
+            lblPriceFeatured3.Text = "19,990,000 d";
+            lblPriceFeatured3.Font = new Font("Segoe UI", 11.5F, FontStyle.Bold);
+            lblPriceFeatured3.ForeColor = Color.Red;
+            lblPriceFeatured3.Location = new Point(12, 195);
+            lblPriceFeatured3.Size = new Size(130, 25);
+
+            lblStockFeatured3.Text = "Con hang (8)";
+            lblStockFeatured3.Font = new Font("Segoe UI", 8.5F, FontStyle.Italic);
+            lblStockFeatured3.ForeColor = Color.FromArgb(16, 185, 129);
+            lblStockFeatured3.Location = new Point(12, 225);
+            lblStockFeatured3.Size = new Size(246, 20);
+
+            btnBuyFeatured3.Text = "Them vao gio";
+            btnBuyFeatured3.Location = new Point(12, 255);
+            btnBuyFeatured3.Size = new Size(246, 35);
+            btnBuyFeatured3.BackColor = Color.RoyalBlue;
+            btnBuyFeatured3.ForeColor = Color.White;
+            btnBuyFeatured3.FlatStyle = FlatStyle.Flat;
+            btnBuyFeatured3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnBuyFeatured3.FlatAppearance.BorderSize = 0;
+
+            flpHomeFeatured.Controls.Add(cardFeatured1);
+            flpHomeFeatured.Controls.Add(cardFeatured2);
+            flpHomeFeatured.Controls.Add(cardFeatured3);
+
+            // --- Storefront Preview ---
+            cardShop1.Size = new Size(270, 310);
+            cardShop1.BackColor = Color.White;
+            cardShop1.BorderStyle = BorderStyle.FixedSingle;
+            cardShop1.Margin = new Padding(0, 0, 25, 25);
+            cardShop1.Padding = new Padding(12);
+            cardShop1.Controls.Add(pbShop1);
+            cardShop1.Controls.Add(lblNameShop1);
+            cardShop1.Controls.Add(lblPriceShop1);
+            cardShop1.Controls.Add(lblStockShop1);
+            cardShop1.Controls.Add(btnBuyShop1);
+
+            pbShop1.Size = new Size(246, 130);
+            pbShop1.Location = new Point(12, 12);
+            pbShop1.SizeMode = PictureBoxSizeMode.Zoom;
+            pbShop1.BackColor = Color.FromArgb(240, 240, 240);
+            pbShop1.ImageLocation = "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80";
+
+            lblNameShop1.Text = "iPhone 15 Pro Max 256GB";
+            lblNameShop1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblNameShop1.ForeColor = Color.Black;
+            lblNameShop1.Location = new Point(12, 152);
+            lblNameShop1.Size = new Size(246, 40);
+            lblNameShop1.AutoEllipsis = true;
+
+            lblPriceShop1.Text = "29,990,000 d";
+            lblPriceShop1.Font = new Font("Segoe UI", 11.5F, FontStyle.Bold);
+            lblPriceShop1.ForeColor = Color.Red;
+            lblPriceShop1.Location = new Point(12, 195);
+            lblPriceShop1.Size = new Size(130, 25);
+
+            lblStockShop1.Text = "Con hang (12)";
+            lblStockShop1.Font = new Font("Segoe UI", 8.5F, FontStyle.Italic);
+            lblStockShop1.ForeColor = Color.FromArgb(16, 185, 129);
+            lblStockShop1.Location = new Point(12, 225);
+            lblStockShop1.Size = new Size(246, 20);
+
+            btnBuyShop1.Text = "Them vao gio";
+            btnBuyShop1.Location = new Point(12, 255);
+            btnBuyShop1.Size = new Size(246, 35);
+            btnBuyShop1.BackColor = Color.RoyalBlue;
+            btnBuyShop1.ForeColor = Color.White;
+            btnBuyShop1.FlatStyle = FlatStyle.Flat;
+            btnBuyShop1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnBuyShop1.FlatAppearance.BorderSize = 0;
+
+            cardShop2.Size = new Size(270, 310);
+            cardShop2.BackColor = Color.White;
+            cardShop2.BorderStyle = BorderStyle.FixedSingle;
+            cardShop2.Margin = new Padding(0, 0, 25, 25);
+            cardShop2.Padding = new Padding(12);
+            cardShop2.Controls.Add(pbShop2);
+            cardShop2.Controls.Add(lblNameShop2);
+            cardShop2.Controls.Add(lblPriceShop2);
+            cardShop2.Controls.Add(lblStockShop2);
+            cardShop2.Controls.Add(btnBuyShop2);
+
+            pbShop2.Size = new Size(246, 130);
+            pbShop2.Location = new Point(12, 12);
+            pbShop2.SizeMode = PictureBoxSizeMode.Zoom;
+            pbShop2.BackColor = Color.FromArgb(240, 240, 240);
+            pbShop2.ImageLocation = "https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=500&q=80";
+
+            lblNameShop2.Text = "iPhone 14 128GB Black";
+            lblNameShop2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblNameShop2.ForeColor = Color.Black;
+            lblNameShop2.Location = new Point(12, 152);
+            lblNameShop2.Size = new Size(246, 40);
+            lblNameShop2.AutoEllipsis = true;
+
+            lblPriceShop2.Text = "18,490,000 d";
+            lblPriceShop2.Font = new Font("Segoe UI", 11.5F, FontStyle.Bold);
+            lblPriceShop2.ForeColor = Color.Red;
+            lblPriceShop2.Location = new Point(12, 195);
+            lblPriceShop2.Size = new Size(130, 25);
+
+            lblStockShop2.Text = "Con hang (6)";
+            lblStockShop2.Font = new Font("Segoe UI", 8.5F, FontStyle.Italic);
+            lblStockShop2.ForeColor = Color.FromArgb(16, 185, 129);
+            lblStockShop2.Location = new Point(12, 225);
+            lblStockShop2.Size = new Size(246, 20);
+
+            btnBuyShop2.Text = "Them vao gio";
+            btnBuyShop2.Location = new Point(12, 255);
+            btnBuyShop2.Size = new Size(246, 35);
+            btnBuyShop2.BackColor = Color.RoyalBlue;
+            btnBuyShop2.ForeColor = Color.White;
+            btnBuyShop2.FlatStyle = FlatStyle.Flat;
+            btnBuyShop2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnBuyShop2.FlatAppearance.BorderSize = 0;
+
+            cardShop3.Size = new Size(270, 310);
+            cardShop3.BackColor = Color.White;
+            cardShop3.BorderStyle = BorderStyle.FixedSingle;
+            cardShop3.Margin = new Padding(0, 0, 25, 25);
+            cardShop3.Padding = new Padding(12);
+            cardShop3.Controls.Add(pbShop3);
+            cardShop3.Controls.Add(lblNameShop3);
+            cardShop3.Controls.Add(lblPriceShop3);
+            cardShop3.Controls.Add(lblStockShop3);
+            cardShop3.Controls.Add(btnBuyShop3);
+
+            pbShop3.Size = new Size(246, 130);
+            pbShop3.Location = new Point(12, 12);
+            pbShop3.SizeMode = PictureBoxSizeMode.Zoom;
+            pbShop3.BackColor = Color.FromArgb(240, 240, 240);
+            pbShop3.ImageLocation = "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=500&q=80";
+
+            lblNameShop3.Text = "iPhone 15 128GB Yellow";
+            lblNameShop3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblNameShop3.ForeColor = Color.Black;
+            lblNameShop3.Location = new Point(12, 152);
+            lblNameShop3.Size = new Size(246, 40);
+            lblNameShop3.AutoEllipsis = true;
+
+            lblPriceShop3.Text = "19,990,000 d";
+            lblPriceShop3.Font = new Font("Segoe UI", 11.5F, FontStyle.Bold);
+            lblPriceShop3.ForeColor = Color.Red;
+            lblPriceShop3.Location = new Point(12, 195);
+            lblPriceShop3.Size = new Size(130, 25);
+
+            lblStockShop3.Text = "Con hang (8)";
+            lblStockShop3.Font = new Font("Segoe UI", 8.5F, FontStyle.Italic);
+            lblStockShop3.ForeColor = Color.FromArgb(16, 185, 129);
+            lblStockShop3.Location = new Point(12, 225);
+            lblStockShop3.Size = new Size(246, 20);
+
+            btnBuyShop3.Text = "Them vao gio";
+            btnBuyShop3.Location = new Point(12, 255);
+            btnBuyShop3.Size = new Size(246, 35);
+            btnBuyShop3.BackColor = Color.RoyalBlue;
+            btnBuyShop3.ForeColor = Color.White;
+            btnBuyShop3.FlatStyle = FlatStyle.Flat;
+            btnBuyShop3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnBuyShop3.FlatAppearance.BorderSize = 0;
+
+            cardShop4.Size = new Size(270, 310);
+            cardShop4.BackColor = Color.White;
+            cardShop4.BorderStyle = BorderStyle.FixedSingle;
+            cardShop4.Margin = new Padding(0, 0, 25, 25);
+            cardShop4.Padding = new Padding(12);
+            cardShop4.Controls.Add(pbShop4);
+            cardShop4.Controls.Add(lblNameShop4);
+            cardShop4.Controls.Add(lblPriceShop4);
+            cardShop4.Controls.Add(lblStockShop4);
+            cardShop4.Controls.Add(btnBuyShop4);
+
+            pbShop4.Size = new Size(246, 130);
+            pbShop4.Location = new Point(12, 12);
+            pbShop4.SizeMode = PictureBoxSizeMode.Zoom;
+            pbShop4.BackColor = Color.FromArgb(240, 240, 240);
+            pbShop4.ImageLocation = "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=500&q=80";
+
+            lblNameShop4.Text = "iPhone 13 128GB Blue";
+            lblNameShop4.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblNameShop4.ForeColor = Color.Black;
+            lblNameShop4.Location = new Point(12, 152);
+            lblNameShop4.Size = new Size(246, 40);
+            lblNameShop4.AutoEllipsis = true;
+
+            lblPriceShop4.Text = "13,990,000 d";
+            lblPriceShop4.Font = new Font("Segoe UI", 11.5F, FontStyle.Bold);
+            lblPriceShop4.ForeColor = Color.Red;
+            lblPriceShop4.Location = new Point(12, 195);
+            lblPriceShop4.Size = new Size(130, 25);
+
+            lblStockShop4.Text = "Con hang (10)";
+            lblStockShop4.Font = new Font("Segoe UI", 8.5F, FontStyle.Italic);
+            lblStockShop4.ForeColor = Color.FromArgb(16, 185, 129);
+            lblStockShop4.Location = new Point(12, 225);
+            lblStockShop4.Size = new Size(246, 20);
+
+            btnBuyShop4.Text = "Them vao gio";
+            btnBuyShop4.Location = new Point(12, 255);
+            btnBuyShop4.Size = new Size(246, 35);
+            btnBuyShop4.BackColor = Color.RoyalBlue;
+            btnBuyShop4.ForeColor = Color.White;
+            btnBuyShop4.FlatStyle = FlatStyle.Flat;
+            btnBuyShop4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnBuyShop4.FlatAppearance.BorderSize = 0;
+
+            flpProducts.Controls.Add(cardShop1);
+            flpProducts.Controls.Add(cardShop2);
+            flpProducts.Controls.Add(cardShop3);
+            flpProducts.Controls.Add(cardShop4);
+
+            // --- Cart Lines Preview ---
+            rowCart1.Size = new Size(520, 75);
+            rowCart1.Margin = new Padding(0, 0, 0, 10);
+            rowCart1.BackColor = Color.FromArgb(240, 240, 240);
+            rowCart1.Controls.Add(pbCart1);
+            rowCart1.Controls.Add(lblNameCart1);
+            rowCart1.Controls.Add(lblPriceCart1);
+            rowCart1.Controls.Add(btnMinusCart1);
+            rowCart1.Controls.Add(lblQtyCart1);
+            rowCart1.Controls.Add(btnPlusCart1);
+            rowCart1.Controls.Add(lblRowTotalCart1);
+            rowCart1.Controls.Add(btnRemoveCart1);
+
+            pbCart1.Size = new Size(60, 60);
+            pbCart1.Location = new Point(10, 8);
+            pbCart1.SizeMode = PictureBoxSizeMode.Zoom;
+            pbCart1.BackColor = Color.White;
+            pbCart1.ImageLocation = "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80";
+
+            lblNameCart1.Text = "iPhone 15 Pro Max 256GB";
+            lblNameCart1.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblNameCart1.Location = new Point(80, 10);
+            lblNameCart1.Size = new Size(230, 20);
+            lblNameCart1.AutoEllipsis = true;
+
+            lblPriceCart1.Text = "29,990,000 d";
+            lblPriceCart1.Font = new Font("Segoe UI", 8.5F);
+            lblPriceCart1.ForeColor = Color.ForestGreen;
+            lblPriceCart1.Location = new Point(80, 32);
+            lblPriceCart1.Size = new Size(180, 18);
+
+            btnMinusCart1.Text = "-";
+            btnMinusCart1.Size = new Size(24, 24);
+            btnMinusCart1.Location = new Point(320, 25);
+            btnMinusCart1.FlatStyle = FlatStyle.Flat;
+            btnMinusCart1.BackColor = Color.White;
+            btnMinusCart1.FlatAppearance.BorderSize = 0;
+
+            lblQtyCart1.Text = "1";
+            lblQtyCart1.Location = new Point(345, 27);
+            lblQtyCart1.Size = new Size(30, 20);
+            lblQtyCart1.TextAlign = ContentAlignment.MiddleCenter;
+            lblQtyCart1.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+
+            btnPlusCart1.Text = "+";
+            btnPlusCart1.Size = new Size(24, 24);
+            btnPlusCart1.Location = new Point(375, 25);
+            btnPlusCart1.FlatStyle = FlatStyle.Flat;
+            btnPlusCart1.BackColor = Color.White;
+            btnPlusCart1.FlatAppearance.BorderSize = 0;
+
+            lblRowTotalCart1.Text = "29,990,000 d";
+            lblRowTotalCart1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblRowTotalCart1.ForeColor = Color.RoyalBlue;
+            lblRowTotalCart1.Location = new Point(410, 27);
+            lblRowTotalCart1.Size = new Size(80, 20);
+            lblRowTotalCart1.TextAlign = ContentAlignment.MiddleRight;
+
+            btnRemoveCart1.Text = "x";
+            btnRemoveCart1.Size = new Size(24, 24);
+            btnRemoveCart1.Location = new Point(495, 25);
+            btnRemoveCart1.FlatStyle = FlatStyle.Flat;
+            btnRemoveCart1.ForeColor = Color.Red;
+            btnRemoveCart1.FlatAppearance.BorderSize = 0;
+
+            rowCart2.Size = new Size(520, 75);
+            rowCart2.Margin = new Padding(0, 0, 0, 10);
+            rowCart2.BackColor = Color.FromArgb(240, 240, 240);
+            rowCart2.Controls.Add(pbCart2);
+            rowCart2.Controls.Add(lblNameCart2);
+            rowCart2.Controls.Add(lblPriceCart2);
+            rowCart2.Controls.Add(btnMinusCart2);
+            rowCart2.Controls.Add(lblQtyCart2);
+            rowCart2.Controls.Add(btnPlusCart2);
+            rowCart2.Controls.Add(lblRowTotalCart2);
+            rowCart2.Controls.Add(btnRemoveCart2);
+
+            pbCart2.Size = new Size(60, 60);
+            pbCart2.Location = new Point(10, 8);
+            pbCart2.SizeMode = PictureBoxSizeMode.Zoom;
+            pbCart2.BackColor = Color.White;
+            pbCart2.ImageLocation = "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80";
+
+            lblNameCart2.Text = "Tai Nghe Sony WH-1000XM5";
+            lblNameCart2.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblNameCart2.Location = new Point(80, 10);
+            lblNameCart2.Size = new Size(230, 20);
+            lblNameCart2.AutoEllipsis = true;
+
+            lblPriceCart2.Text = "8,490,000 d";
+            lblPriceCart2.Font = new Font("Segoe UI", 8.5F);
+            lblPriceCart2.ForeColor = Color.ForestGreen;
+            lblPriceCart2.Location = new Point(80, 32);
+            lblPriceCart2.Size = new Size(180, 18);
+
+            btnMinusCart2.Text = "-";
+            btnMinusCart2.Size = new Size(24, 24);
+            btnMinusCart2.Location = new Point(320, 25);
+            btnMinusCart2.FlatStyle = FlatStyle.Flat;
+            btnMinusCart2.BackColor = Color.White;
+            btnMinusCart2.FlatAppearance.BorderSize = 0;
+
+            lblQtyCart2.Text = "1";
+            lblQtyCart2.Location = new Point(345, 27);
+            lblQtyCart2.Size = new Size(30, 20);
+            lblQtyCart2.TextAlign = ContentAlignment.MiddleCenter;
+            lblQtyCart2.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+
+            btnPlusCart2.Text = "+";
+            btnPlusCart2.Size = new Size(24, 24);
+            btnPlusCart2.Location = new Point(375, 25);
+            btnPlusCart2.FlatStyle = FlatStyle.Flat;
+            btnPlusCart2.BackColor = Color.White;
+            btnPlusCart2.FlatAppearance.BorderSize = 0;
+
+            lblRowTotalCart2.Text = "8,490,000 d";
+            lblRowTotalCart2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblRowTotalCart2.ForeColor = Color.RoyalBlue;
+            lblRowTotalCart2.Location = new Point(410, 27);
+            lblRowTotalCart2.Size = new Size(80, 20);
+            lblRowTotalCart2.TextAlign = ContentAlignment.MiddleRight;
+
+            btnRemoveCart2.Text = "x";
+            btnRemoveCart2.Size = new Size(24, 24);
+            btnRemoveCart2.Location = new Point(495, 25);
+            btnRemoveCart2.FlatStyle = FlatStyle.Flat;
+            btnRemoveCart2.ForeColor = Color.Red;
+            btnRemoveCart2.FlatAppearance.BorderSize = 0;
+
+            rowCart3.Size = new Size(520, 75);
+            rowCart3.Margin = new Padding(0, 0, 0, 10);
+            rowCart3.BackColor = Color.FromArgb(240, 240, 240);
+            rowCart3.Controls.Add(pbCart3);
+            rowCart3.Controls.Add(lblNameCart3);
+            rowCart3.Controls.Add(lblPriceCart3);
+            rowCart3.Controls.Add(btnMinusCart3);
+            rowCart3.Controls.Add(lblQtyCart3);
+            rowCart3.Controls.Add(btnPlusCart3);
+            rowCart3.Controls.Add(lblRowTotalCart3);
+            rowCart3.Controls.Add(btnRemoveCart3);
+
+            pbCart3.Size = new Size(60, 60);
+            pbCart3.Location = new Point(10, 8);
+            pbCart3.SizeMode = PictureBoxSizeMode.Zoom;
+            pbCart3.BackColor = Color.White;
+            pbCart3.ImageLocation = "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80";
+
+            lblNameCart3.Text = "Apple Watch Ultra 2 Titan";
+            lblNameCart3.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lblNameCart3.Location = new Point(80, 10);
+            lblNameCart3.Size = new Size(230, 20);
+            lblNameCart3.AutoEllipsis = true;
+
+            lblPriceCart3.Text = "21,990,000 d";
+            lblPriceCart3.Font = new Font("Segoe UI", 8.5F);
+            lblPriceCart3.ForeColor = Color.ForestGreen;
+            lblPriceCart3.Location = new Point(80, 32);
+            lblPriceCart3.Size = new Size(180, 18);
+
+            btnMinusCart3.Text = "-";
+            btnMinusCart3.Size = new Size(24, 24);
+            btnMinusCart3.Location = new Point(320, 25);
+            btnMinusCart3.FlatStyle = FlatStyle.Flat;
+            btnMinusCart3.BackColor = Color.White;
+            btnMinusCart3.FlatAppearance.BorderSize = 0;
+
+            lblQtyCart3.Text = "1";
+            lblQtyCart3.Location = new Point(345, 27);
+            lblQtyCart3.Size = new Size(30, 20);
+            lblQtyCart3.TextAlign = ContentAlignment.MiddleCenter;
+            lblQtyCart3.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+
+            btnPlusCart3.Text = "+";
+            btnPlusCart3.Size = new Size(24, 24);
+            btnPlusCart3.Location = new Point(375, 25);
+            btnPlusCart3.FlatStyle = FlatStyle.Flat;
+            btnPlusCart3.BackColor = Color.White;
+            btnPlusCart3.FlatAppearance.BorderSize = 0;
+
+            lblRowTotalCart3.Text = "21,990,000 d";
+            lblRowTotalCart3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblRowTotalCart3.ForeColor = Color.RoyalBlue;
+            lblRowTotalCart3.Location = new Point(410, 27);
+            lblRowTotalCart3.Size = new Size(80, 20);
+            lblRowTotalCart3.TextAlign = ContentAlignment.MiddleRight;
+
+            btnRemoveCart3.Text = "x";
+            btnRemoveCart3.Size = new Size(24, 24);
+            btnRemoveCart3.Location = new Point(495, 25);
+            btnRemoveCart3.FlatStyle = FlatStyle.Flat;
+            btnRemoveCart3.ForeColor = Color.Red;
+            btnRemoveCart3.FlatAppearance.BorderSize = 0;
+
+            flpCartLines.Controls.Add(rowCart1);
+            flpCartLines.Controls.Add(rowCart2);
+            flpCartLines.Controls.Add(rowCart3);
+
+            // --- News Cards Preview ---
+            cardNews1.Size = new Size(310, 220);
+            cardNews1.BackColor = Color.White;
+            cardNews1.BorderStyle = BorderStyle.FixedSingle;
+            cardNews1.Margin = new Padding(0, 0, 20, 20);
+            cardNews1.Padding = new Padding(12);
+            cardNews1.Controls.Add(lblTitleNews1);
+            cardNews1.Controls.Add(lblSummaryNews1);
+            cardNews1.Controls.Add(btnReadMoreNews1);
+
+            lblTitleNews1.Text = "Danh gia chi tiet iPhone 15 Pro Max sau 6 thang su dung";
+            lblTitleNews1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTitleNews1.ForeColor = Color.RoyalBlue;
+            lblTitleNews1.Location = new Point(12, 12);
+            lblTitleNews1.Size = new Size(286, 45);
+            lblTitleNews1.AutoEllipsis = true;
+
+            lblSummaryNews1.Text = "Lieu bo khung vien Titan cao cap cung camera zoom quang hoc 5x co thuc su xung dang voi so tien dau tu gan 30 trieu dong? Hay cung chung toi danh gia lai nhung uu nhuoc diem thuc te.";
+            lblSummaryNews1.Font = new Font("Segoe UI", 8.5F);
+            lblSummaryNews1.ForeColor = Color.FromArgb(64, 64, 64);
+            lblSummaryNews1.Location = new Point(12, 65);
+            lblSummaryNews1.Size = new Size(286, 95);
+            lblSummaryNews1.AutoEllipsis = true;
+
+            btnReadMoreNews1.Text = "Doc Chi Tiet ->";
+            btnReadMoreNews1.Location = new Point(12, 170);
+            btnReadMoreNews1.Size = new Size(286, 32);
+            btnReadMoreNews1.BackColor = Color.FromArgb(240, 240, 240);
+            btnReadMoreNews1.ForeColor = Color.RoyalBlue;
+            btnReadMoreNews1.FlatStyle = FlatStyle.Flat;
+            btnReadMoreNews1.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            btnReadMoreNews1.FlatAppearance.BorderSize = 0;
+
+            cardNews2.Size = new Size(310, 220);
+            cardNews2.BackColor = Color.White;
+            cardNews2.BorderStyle = BorderStyle.FixedSingle;
+            cardNews2.Margin = new Padding(0, 0, 20, 20);
+            cardNews2.Padding = new Padding(12);
+            cardNews2.Controls.Add(lblTitleNews2);
+            cardNews2.Controls.Add(lblSummaryNews2);
+            cardNews2.Controls.Add(btnReadMoreNews2);
+
+            lblTitleNews2.Text = "Samsung cap nhat loat tinh nang Galaxy AI tieng Viet sieu xin";
+            lblTitleNews2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTitleNews2.ForeColor = Color.RoyalBlue;
+            lblTitleNews2.Location = new Point(12, 12);
+            lblTitleNews2.Size = new Size(286, 45);
+            lblTitleNews2.AutoEllipsis = true;
+
+            lblSummaryNews2.Text = "Ban cap nhat One UI moi nhat mang den tinh nang Live Translate (phien dich cuoc goi thoi gian thuc) va tro ly chat thong minh ho tro tron ven ngon ngu Tieng Viet cho cac dong S23 va Z Fold5.";
+            lblSummaryNews2.Font = new Font("Segoe UI", 8.5F);
+            lblSummaryNews2.ForeColor = Color.FromArgb(64, 64, 64);
+            lblSummaryNews2.Location = new Point(12, 65);
+            lblSummaryNews2.Size = new Size(286, 95);
+            lblSummaryNews2.AutoEllipsis = true;
+
+            btnReadMoreNews2.Text = "Doc Chi Tiet ->";
+            btnReadMoreNews2.Location = new Point(12, 170);
+            btnReadMoreNews2.Size = new Size(286, 32);
+            btnReadMoreNews2.BackColor = Color.FromArgb(240, 240, 240);
+            btnReadMoreNews2.ForeColor = Color.RoyalBlue;
+            btnReadMoreNews2.FlatStyle = FlatStyle.Flat;
+            btnReadMoreNews2.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            btnReadMoreNews2.FlatAppearance.BorderSize = 0;
+
+            cardNews3.Size = new Size(310, 220);
+            cardNews3.BackColor = Color.White;
+            cardNews3.BorderStyle = BorderStyle.FixedSingle;
+            cardNews3.Margin = new Padding(0, 0, 20, 20);
+            cardNews3.Padding = new Padding(12);
+            cardNews3.Controls.Add(lblTitleNews3);
+            cardNews3.Controls.Add(lblSummaryNews3);
+            cardNews3.Controls.Add(btnReadMoreNews3);
+
+            lblTitleNews3.Text = "Ro ri thiet ke tai nghe Sony WH-1000XM6 cuc sang xin min";
+            lblTitleNews3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTitleNews3.ForeColor = Color.RoyalBlue;
+            lblTitleNews3.Location = new Point(12, 12);
+            lblTitleNews3.Size = new Size(286, 45);
+            lblTitleNews3.AutoEllipsis = true;
+
+            lblSummaryNews3.Text = "Nhieu nguon tin ro ri uy tin cho thay mau tai nghe over-ear chong on chu dong dau bang tiep theo cua Sony se co thay doi lon ve ngoai hinh gap gon va chip chong on ANC the he moi.";
+            lblSummaryNews3.Font = new Font("Segoe UI", 8.5F);
+            lblSummaryNews3.ForeColor = Color.FromArgb(64, 64, 64);
+            lblSummaryNews3.Location = new Point(12, 65);
+            lblSummaryNews3.Size = new Size(286, 95);
+            lblSummaryNews3.AutoEllipsis = true;
+
+            btnReadMoreNews3.Text = "Doc Chi Tiet ->";
+            btnReadMoreNews3.Location = new Point(12, 170);
+            btnReadMoreNews3.Size = new Size(286, 32);
+            btnReadMoreNews3.BackColor = Color.FromArgb(240, 240, 240);
+            btnReadMoreNews3.ForeColor = Color.RoyalBlue;
+            btnReadMoreNews3.FlatStyle = FlatStyle.Flat;
+            btnReadMoreNews3.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            btnReadMoreNews3.FlatAppearance.BorderSize = 0;
+
+            flpNews.Controls.Add(cardNews1);
+            flpNews.Controls.Add(cardNews2);
+            flpNews.Controls.Add(cardNews3);
+
             ResumeLayout(false);
         }
 
@@ -1265,5 +1984,94 @@ namespace TechStoreWinApp
         private Label lblAboutMsg;
         private TextBox txtAboutMsg;
         private Button btnSendAboutMsg;
+
+        // Home Panel Preview Cards
+        private Panel cardFeatured1;
+        private PictureBox pbFeatured1;
+        private Label lblNameFeatured1;
+        private Label lblPriceFeatured1;
+        private Label lblStockFeatured1;
+        private Button btnBuyFeatured1;
+        private Panel cardFeatured2;
+        private PictureBox pbFeatured2;
+        private Label lblNameFeatured2;
+        private Label lblPriceFeatured2;
+        private Label lblStockFeatured2;
+        private Button btnBuyFeatured2;
+        private Panel cardFeatured3;
+        private PictureBox pbFeatured3;
+        private Label lblNameFeatured3;
+        private Label lblPriceFeatured3;
+        private Label lblStockFeatured3;
+        private Button btnBuyFeatured3;
+
+        // Shop Panel Preview Cards
+        private Panel cardShop1;
+        private PictureBox pbShop1;
+        private Label lblNameShop1;
+        private Label lblPriceShop1;
+        private Label lblStockShop1;
+        private Button btnBuyShop1;
+        private Panel cardShop2;
+        private PictureBox pbShop2;
+        private Label lblNameShop2;
+        private Label lblPriceShop2;
+        private Label lblStockShop2;
+        private Button btnBuyShop2;
+        private Panel cardShop3;
+        private PictureBox pbShop3;
+        private Label lblNameShop3;
+        private Label lblPriceShop3;
+        private Label lblStockShop3;
+        private Button btnBuyShop3;
+        private Panel cardShop4;
+        private PictureBox pbShop4;
+        private Label lblNameShop4;
+        private Label lblPriceShop4;
+        private Label lblStockShop4;
+        private Button btnBuyShop4;
+
+        // Cart Panel Preview Rows
+        private Panel rowCart1;
+        private PictureBox pbCart1;
+        private Label lblNameCart1;
+        private Label lblPriceCart1;
+        private Button btnMinusCart1;
+        private Label lblQtyCart1;
+        private Button btnPlusCart1;
+        private Label lblRowTotalCart1;
+        private Button btnRemoveCart1;
+        private Panel rowCart2;
+        private PictureBox pbCart2;
+        private Label lblNameCart2;
+        private Label lblPriceCart2;
+        private Button btnMinusCart2;
+        private Label lblQtyCart2;
+        private Button btnPlusCart2;
+        private Label lblRowTotalCart2;
+        private Button btnRemoveCart2;
+        private Panel rowCart3;
+        private PictureBox pbCart3;
+        private Label lblNameCart3;
+        private Label lblPriceCart3;
+        private Button btnMinusCart3;
+        private Label lblQtyCart3;
+        private Button btnPlusCart3;
+        private Label lblRowTotalCart3;
+        private Button btnRemoveCart3;
+
+        // News Panel Preview Cards
+        private Panel cardNews1;
+        private Label lblTitleNews1;
+        private Label lblSummaryNews1;
+        private Button btnReadMoreNews1;
+        private Panel cardNews2;
+        private Label lblTitleNews2;
+        private Label lblSummaryNews2;
+        private Button btnReadMoreNews2;
+        private Panel cardNews3;
+        private Label lblTitleNews3;
+        private Label lblSummaryNews3;
+        private Button btnReadMoreNews3;
     }
 }

@@ -50,7 +50,7 @@ namespace TechStoreWinApp
             this.lblOrderId.Name = "lblOrderId";
             this.lblOrderId.Size = new Size(340, 20);
             this.lblOrderId.TabIndex = 1;
-            this.lblOrderId.Text = "Mã đơn hàng: #DHXXXX";
+            this.lblOrderId.Text = "Ma don hang: #DH182418";
             // 
             // lblOrderDate
             // 
@@ -59,7 +59,7 @@ namespace TechStoreWinApp
             this.lblOrderDate.Name = "lblOrderDate";
             this.lblOrderDate.Size = new Size(340, 20);
             this.lblOrderDate.TabIndex = 2;
-            this.lblOrderDate.Text = "Ngày đặt hàng: dd/MM/yyyy";
+            this.lblOrderDate.Text = "Ngay dat hang: 11/06/2026";
             // 
             // lblStatus
             // 
@@ -69,7 +69,7 @@ namespace TechStoreWinApp
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new Size(340, 20);
             this.lblStatus.TabIndex = 3;
-            this.lblStatus.Text = "Trạng thái: Đang xử lý";
+            this.lblStatus.Text = "Trang thai: Cho xu ly";
             // 
             // line1
             // 
@@ -101,6 +101,7 @@ namespace TechStoreWinApp
             this.lstItems.SelectionMode = SelectionMode.None;
             this.lstItems.Size = new Size(340, 119);
             this.lstItems.TabIndex = 6;
+            this.lstItems.Items.AddRange(new object[] { "Tai Nghe Sony WH-1000XM5 x1 - 8,490,000 d", "Phi van chuyen: 0 d", "Voucher TECH10: -500,000 d" });
             // 
             // line2
             // 
@@ -118,7 +119,7 @@ namespace TechStoreWinApp
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new Size(340, 25);
             this.lblTotalAmount.TabIndex = 8;
-            this.lblTotalAmount.Text = "TỔNG TIỀN: 0 ₫";
+            this.lblTotalAmount.Text = "TONG TIEN: 7,990,000 d";
             this.lblTotalAmount.TextAlign = ContentAlignment.MiddleRight;
             // 
             // btnClose

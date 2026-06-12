@@ -83,8 +83,6 @@ namespace TechStoreWinApp
             // Settings operations
             btnSettingsSave.Click += BtnSettingsSave_Click;
 
-            // Chart painting
-            panelPieChart.Paint += PanelPieChart_Paint;
         }
 
         private void SwitchPage(string pageName)
@@ -642,6 +640,51 @@ namespace TechStoreWinApp
         {
             Graphics g = e.Graphics;
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            if (DesignMode || System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime || _db == null)
+            {
+                g.Clear(Color.White);
+                var previewCounts = new (int count, Color color, string label)[]
+                {
+                    (4, Color.FromArgb(71, 85, 105), "Apple"),
+                    (3, Color.FromArgb(59, 130, 246), "Samsung"),
+                    (3, Color.FromArgb(249, 115, 22), "Xiaomi"),
+                    (3, Color.FromArgb(16, 185, 129), "Laptops"),
+                    (4, Color.FromArgb(236, 72, 153), "Watches"),
+                    (4, Color.FromArgb(107, 114, 128), "Accessories")
+                };
+
+                int totalPreview = previewCounts.Sum(item => item.count);
+                float currentAnglePreview = 0;
+                int legendYPreview = 80;
+
+                using (Font titleFont = new Font("Segoe UI", 10.5F, FontStyle.Bold))
+                {
+                    g.DrawString("Co cau danh muc san pham trong kho", titleFont, Brushes.DarkBlue, new PointF(30, 20));
+                }
+
+                foreach (var item in previewCounts)
+                {
+                    float sweepAngle = 360f * item.count / totalPreview;
+                    using (var brush = new SolidBrush(item.color))
+                    {
+                        g.FillPie(brush, 30, 80, 220, 220, currentAnglePreview, sweepAngle);
+                        g.FillRectangle(brush, 280, legendYPreview, 15, 15);
+                    }
+
+                    g.DrawPie(Pens.White, 30, 80, 220, 220, currentAnglePreview, sweepAngle);
+                    using (Font legendFont = new Font("Segoe UI", 9.5F))
+                    {
+                        string pctText = string.Format("{0} ({1:P0})", item.label, (double)item.count / totalPreview);
+                        g.DrawString(pctText, legendFont, Brushes.Black, new PointF(305, legendYPreview - 2));
+                    }
+
+                    currentAnglePreview += sweepAngle;
+                    legendYPreview += 30;
+                }
+
+                return;
+            }
 
             // Get product category counts
             var categoryCounts = new Dictionary<string, (int count, Color color, string displayName)>();

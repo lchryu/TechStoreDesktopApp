@@ -70,6 +70,7 @@ namespace TechStoreWinApp
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(320, 28);
             this.txtName.TabIndex = 2;
+            this.txtName.Text = "Nguyen Van Khach";
             // 
             // lblPhone
             // 
@@ -89,6 +90,7 @@ namespace TechStoreWinApp
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(320, 28);
             this.txtPhone.TabIndex = 4;
+            this.txtPhone.Text = "0987654321";
             // 
             // lblAddress
             // 
@@ -108,6 +110,7 @@ namespace TechStoreWinApp
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(320, 28);
             this.txtAddress.TabIndex = 6;
+            this.txtAddress.Text = "456 Duong CMT8, Quan 3, TP.HCM";
             // 
             // lblPayment
             // 
@@ -131,6 +134,7 @@ namespace TechStoreWinApp
             this.cbPayment.Name = "cbPayment";
             this.cbPayment.Size = new System.Drawing.Size(320, 28);
             this.cbPayment.TabIndex = 8;
+            this.cbPayment.Text = "Thanh toan khi nhan hang (COD)";
             // 
             // summaryPanel
             // 
@@ -164,6 +168,7 @@ namespace TechStoreWinApp
             this.lstSummary.Name = "lstSummary";
             this.lstSummary.Size = new System.Drawing.Size(270, 220);
             this.lstSummary.TabIndex = 1;
+            this.lstSummary.Items.AddRange(new object[] { "iPhone 15 Pro Max 256GB x1", "Tai Nghe Sony WH-1000XM5 x1", "Apple Watch Ultra 2 Titan x1" });
             // 
             // line
             // 
@@ -181,7 +186,7 @@ namespace TechStoreWinApp
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(270, 30);
             this.lblTotal.TabIndex = 3;
-            this.lblTotal.Text = "Tổng Cộng: 0 ₫";
+            this.lblTotal.Text = "Tong Cong: 60,470,000 d";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // footerPanel

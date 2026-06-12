@@ -64,6 +64,7 @@ namespace TechStoreWinApp
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new Size(250, 25);
             this.txtUsername.TabIndex = 2;
+            this.txtUsername.Text = "user";
             // 
             // btnCheckUser
             // 
@@ -98,7 +99,7 @@ namespace TechStoreWinApp
             this.lblQuestionText.Padding = new Padding(5);
             this.lblQuestionText.Size = new Size(360, 35);
             this.lblQuestionText.TabIndex = 5;
-            this.lblQuestionText.Text = "Câu hỏi ở đây...";
+            this.lblQuestionText.Text = "Ten me cua ban la gi?";
             this.lblQuestionText.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblAnswerTitle
@@ -119,6 +120,7 @@ namespace TechStoreWinApp
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.Size = new Size(250, 25);
             this.txtAnswer.TabIndex = 7;
+            this.txtAnswer.Text = "Nguyen Thi A";
             // 
             // btnVerify
             // 
@@ -153,6 +155,7 @@ namespace TechStoreWinApp
             this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.Size = new Size(250, 25);
             this.txtNewPassword.TabIndex = 10;
+            this.txtNewPassword.Text = "123456";
             // 
             // btnReset
             // 

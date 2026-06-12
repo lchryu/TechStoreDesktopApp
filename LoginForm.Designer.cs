@@ -93,6 +93,7 @@ namespace TechStoreWinApp
             this.txtLogUsername.PlaceholderText = "Nhập tài khoản...";
             this.txtLogUsername.Size = new Size(328, 25);
             this.txtLogUsername.TabIndex = 1;
+            this.txtLogUsername.Text = "user";
             // 
             // lblLogPass
             // 
@@ -114,6 +115,7 @@ namespace TechStoreWinApp
             this.txtLogPassword.PlaceholderText = "Nhập mật khẩu...";
             this.txtLogPassword.Size = new Size(328, 25);
             this.txtLogPassword.TabIndex = 3;
+            this.txtLogPassword.Text = "123";
             // 
             // btnSubmitLogin
             // 
