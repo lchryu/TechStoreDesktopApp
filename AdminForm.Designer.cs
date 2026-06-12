@@ -112,6 +112,8 @@ namespace TechStoreWinApp
             panelRevenueChart = new Panel();
             pbPieChartMock = new PictureBox();
             pbRevenueChartMock = new PictureBox();
+            lblPieChartTitle = new Label();
+            lblRevenueChartTitle = new Label();
 
             // 2. Inventory Controls
             panelInventory = new Panel();
@@ -640,12 +642,23 @@ namespace TechStoreWinApp
             // panelPieChart
             // 
             panelPieChart.Controls.Add(pbPieChartMock);
+            panelPieChart.Controls.Add(lblPieChartTitle);
             panelPieChart.Dock = DockStyle.Right;
             panelPieChart.Width = 380;
             panelPieChart.BackColor = Color.White;
             panelPieChart.Name = "panelPieChart";
             panelPieChart.BorderStyle = BorderStyle.None;
             panelPieChart.Paint += PanelPieChart_Paint;
+            // 
+            // lblPieChartTitle
+            // 
+            lblPieChartTitle.Dock = DockStyle.Top;
+            lblPieChartTitle.Height = 40;
+            lblPieChartTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblPieChartTitle.ForeColor = Color.DarkBlue;
+            lblPieChartTitle.Text = "Cơ cấu danh mục sản phẩm trong kho";
+            lblPieChartTitle.TextAlign = ContentAlignment.MiddleLeft;
+            lblPieChartTitle.Name = "lblPieChartTitle";
             // 
             // pbPieChartMock
             // 
@@ -656,11 +669,22 @@ namespace TechStoreWinApp
             // panelRevenueChart
             // 
             panelRevenueChart.Controls.Add(pbRevenueChartMock);
+            panelRevenueChart.Controls.Add(lblRevenueChartTitle);
             panelRevenueChart.Dock = DockStyle.Fill;
             panelRevenueChart.BackColor = Color.White;
             panelRevenueChart.Name = "panelRevenueChart";
             panelRevenueChart.BorderStyle = BorderStyle.None;
             panelRevenueChart.Paint += PanelRevenueChart_Paint;
+            // 
+            // lblRevenueChartTitle
+            // 
+            lblRevenueChartTitle.Dock = DockStyle.Top;
+            lblRevenueChartTitle.Height = 40;
+            lblRevenueChartTitle.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            lblRevenueChartTitle.ForeColor = Color.DarkBlue;
+            lblRevenueChartTitle.Text = "Biến động doanh thu theo ngày";
+            lblRevenueChartTitle.TextAlign = ContentAlignment.MiddleLeft;
+            lblRevenueChartTitle.Name = "lblRevenueChartTitle";
             // 
             // pbRevenueChartMock
             // 
@@ -1660,6 +1684,8 @@ namespace TechStoreWinApp
         private Panel panelRevenueChart;
         private PictureBox pbPieChartMock;
         private PictureBox pbRevenueChartMock;
+        private Label lblPieChartTitle;
+        private Label lblRevenueChartTitle;
 
         // 2. Inventory Controls
         private Panel panelInventory;

@@ -723,10 +723,7 @@ namespace TechStoreWinApp
                 float currentAnglePreview = 0;
                 int legendYPreview = 80;
 
-                using (Font titleFont = new Font("Segoe UI", 10.5F, FontStyle.Bold))
-                {
-                    g.DrawString("Co cau danh muc san pham trong kho", titleFont, Brushes.DarkBlue, new PointF(30, 20));
-                }
+
 
                 foreach (var item in previewCounts)
                 {
@@ -772,11 +769,7 @@ namespace TechStoreWinApp
             float currentAngle = 0;
             int legendY = 80;
 
-            // Header text
-            using (Font titleFont = new Font("Segoe UI", 10.5F, FontStyle.Bold))
-            {
-                g.DrawString("Cơ Cấu Danh Mục Sản Phẩm Trong Kho", titleFont, Brushes.DarkBlue, new PointF(30, 20));
-            }
+
 
             foreach (var kvp in categoryCounts)
             {
@@ -838,11 +831,7 @@ namespace TechStoreWinApp
                 history = _db.Sales.History;
             }
 
-            // Draw Title
-            using (Font titleFont = new Font("Segoe UI", 10.5F, FontStyle.Bold))
-            {
-                g.DrawString("Biến động doanh thu theo ngày", titleFont, Brushes.DarkBlue, new PointF(10, 20));
-            }
+
 
             if (history.Count == 0) return;
 
