@@ -110,6 +110,8 @@ namespace TechStoreWinApp
             panelPieChart = new Panel();
             lstSalesHistory = new ListBox();
             panelRevenueChart = new Panel();
+            pbPieChartMock = new PictureBox();
+            pbRevenueChartMock = new PictureBox();
 
             // 2. Inventory Controls
             panelInventory = new Panel();
@@ -637,6 +639,7 @@ namespace TechStoreWinApp
             // 
             // panelPieChart
             // 
+            panelPieChart.Controls.Add(pbPieChartMock);
             panelPieChart.Dock = DockStyle.Right;
             panelPieChart.Width = 380;
             panelPieChart.BackColor = Color.White;
@@ -644,13 +647,28 @@ namespace TechStoreWinApp
             panelPieChart.BorderStyle = BorderStyle.None;
             panelPieChart.Paint += PanelPieChart_Paint;
             // 
+            // pbPieChartMock
+            // 
+            pbPieChartMock.Dock = DockStyle.Fill;
+            pbPieChartMock.ImageLocation = "chart_pie_mock.png";
+            pbPieChartMock.SizeMode = PictureBoxSizeMode.Zoom;
+            pbPieChartMock.Name = "pbPieChartMock";
+            // 
             // panelRevenueChart
             // 
+            panelRevenueChart.Controls.Add(pbRevenueChartMock);
             panelRevenueChart.Dock = DockStyle.Fill;
             panelRevenueChart.BackColor = Color.White;
             panelRevenueChart.Name = "panelRevenueChart";
             panelRevenueChart.BorderStyle = BorderStyle.None;
             panelRevenueChart.Paint += PanelRevenueChart_Paint;
+            // 
+            // pbRevenueChartMock
+            // 
+            pbRevenueChartMock.Dock = DockStyle.Fill;
+            pbRevenueChartMock.ImageLocation = "chart_revenue_mock.png";
+            pbRevenueChartMock.SizeMode = PictureBoxSizeMode.Zoom;
+            pbRevenueChartMock.Name = "pbRevenueChartMock";
             // 
             // panelInventory
             // 
@@ -1642,6 +1660,8 @@ namespace TechStoreWinApp
         private ListBox lstSalesHistory;
         private Panel panelPieChart;
         private Panel panelRevenueChart;
+        private PictureBox pbPieChartMock;
+        private PictureBox pbRevenueChartMock;
 
         // 2. Inventory Controls
         private Panel panelInventory;

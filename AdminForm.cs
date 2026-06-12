@@ -37,6 +37,10 @@ namespace TechStoreWinApp
                 return;
             }
 
+            // Hide design-time previews at runtime
+            pbPieChartMock.Visible = false;
+            pbRevenueChartMock.Visible = false;
+
             lblUserInfo.Text = $"Xin chào, {_currentUser.FullName}";
             lblUserRole.Text = "Vai trò: Quản trị viên";
 
@@ -49,6 +53,10 @@ namespace TechStoreWinApp
             _db = AppDatabase.Load();
             _currentUser = loggedInUser;
             InitializeComponent();
+
+            // Hide design-time previews at runtime
+            pbPieChartMock.Visible = false;
+            pbRevenueChartMock.Visible = false;
 
             lblUserInfo.Text = $"Xin chào, {_currentUser.FullName}";
             lblUserRole.Text = "Vai trò: Quản trị viên";
